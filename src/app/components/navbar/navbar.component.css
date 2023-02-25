@@ -1,0 +1,10 @@
+.m-navbar .m-logo{
+    height: 32px !important;   
+}
+.m-navbar a{
+    color: #35a5a7;
+    font-weight:500;
+}
+.m-navbar .navbar-nav .nav-link.active{
+    color: #5f8d04 !important;
+}
