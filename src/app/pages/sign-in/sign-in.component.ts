@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignInComponent implements OnInit {
 
+  signInVisible:boolean=true;
+  forgotEmailVisible:boolean=false;
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  onclick(){
+    this.signInVisible=!this.signInVisible;
+    this.forgotEmailVisible=!this.forgotEmailVisible;
   }
 
 }

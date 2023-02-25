@@ -1,0 +1,74 @@
+h2{
+    color: #35a5a7; 
+}
+.signin-text{
+    color: #f05498;
+}
+.form-control{
+    border: 1px solid #71d3d5 !important;
+}
+.image-section {
+	background-color: white; border-top-left-radius : 8px;
+	border-bottom-left-radius: 8px;
+	box-shadow: 0.48rem 7px 8px #888889ad;
+	border-top-left-radius: 8px;
+	padding-top: 4%;
+}
+.text-section {
+	padding: 3.5%;
+	background-color: #f8f7fc;
+	border: none;
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+	box-shadow: 5px 7px 8px #888889ad;
+}
+.forgot-btn{
+    margin-top: -12px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    color: rgb(43, 43, 238);
+}
+.forgot-btn:hover{
+    color: rgb(5, 5, 194);
+    cursor: pointer;
+}
+.social-header{
+    font-size: 1.5rem;
+    color: #35a5a7;
+    margin-top: -12px;
+}
+.social-media i {
+	background-color: #55c4c6;
+	font-size: 28px;
+	padding: 11px 0 0 0px;
+	margin-left: 13px;
+	text-align: center;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	color: white;
+	box-shadow: 1px 0px 3px #888889ad;
+	cursor: pointer;
+}
+.social-media i:hover {
+	background-color: #35a5a7;
+	color: white;
+	transform: translate(0, -2px);
+	box-shadow: 1px 0px 3px #888889ad;
+}
+.register-section a{
+	text-decoration: none;
+	background-color: #f397bf;
+	color: white;
+	padding: 12px;
+	border-radius: 50px;
+	margin-left: 2px;
+	box-shadow: 1px 2px 9px #f397bf;
+	cursor: pointer;
+}
+.register-section a:hover {
+	background-color: #f05498;
+	color: white;
+	box-shadow: 1px 2px 9px #f05498;
+}
+
