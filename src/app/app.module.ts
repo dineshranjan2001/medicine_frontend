@@ -6,6 +6,10 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SignInComponent } from './pages/sign-in/sign-in.component';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
+import { UserDashboardComponent } from './pages/user-dashboard/user-dashboard.component';
+import { ShopDashboardComponent } from './pages/shop-dashboard/shop-dashboard.component';
+import { ShopSignInComponent } from './pages/shop-sign-in/shop-sign-in.component';
+import { ShopSignUpComponent } from './pages/shop-sign-up/shop-sign-up.component';
 
 
 
@@ -14,7 +18,11 @@ import { SignUpComponent } from './pages/sign-up/sign-up.component';
     AppComponent,
     NavbarComponent,
     SignInComponent,
-    SignUpComponent
+    SignUpComponent,
+    UserDashboardComponent,
+    ShopDashboardComponent,
+    ShopSignInComponent,
+    ShopSignUpComponent
   ],
   imports: [
     BrowserModule,
