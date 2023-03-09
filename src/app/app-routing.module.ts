@@ -25,7 +25,7 @@ const routes: Routes = [
     path:"shop-sign-up",
     component:ShopSignUpComponent,
     pathMatch:"full"
-  }
+  },
 ];
 
 @NgModule({
