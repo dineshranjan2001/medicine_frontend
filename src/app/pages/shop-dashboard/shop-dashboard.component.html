@@ -1,0 +1,24 @@
+<body>
+  <div [ngClass]="status ? 'toggled' : ''" class="d-flex" id="wrapper">
+    <div class="side-nav">
+      <app-shop-side-nav></app-shop-side-nav>
+    </div>
+    <div class="dashboard-contents-section">
+      <section class="navbar-section">
+        <nav class="navbar">
+          <div class="container-fluid">
+            <span class="bar-icon-section">
+              <i class="fa fa-bars" (click)="addToggle()"></i> Dashboard
+            </span>
+            <div class="profile-short-name">
+              JMS
+            </div>
+          </div>
+        </nav>
+      </section>
+      <section class="main-contents">
+        <router-outlet></router-outlet>
+      </section>
+    </div>
+  </div>
+</body>

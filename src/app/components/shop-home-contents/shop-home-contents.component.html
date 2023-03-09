@@ -1,0 +1,244 @@
+<div class="container px-5  pt-4">
+    <section class="medicine-details-section">
+        <h5>Medicine Details</h5>
+        <div class="row pb-4">
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <div class="card-header">
+                        Total Medicine
+                    </div>
+                    <div class="card-body">
+                        <span>200</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <div class="card-header">
+                        Ayurvedic Medicine
+                    </div>
+                    <div class="card-body">
+                        <span>200</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <div class="card-header">
+                        Homeopathy Medicine
+                    </div>
+                    <div class="card-body">
+                        <span>200</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <div class="card-header">
+                        Allopathic Medicine
+                    </div>
+                    <div class="card-body">
+                        <span>200</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="soldout-stock-details">
+        <h5>Stock/Soldout Details</h5>
+        <div class="row pb-3">
+            <div class="col-md-2 py-2">
+                <div class="card text-center">
+                    <div class="card-header">
+                        Total Medicine Stock
+                    </div>
+                    <div class="card-body">
+                        200
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 py-2">
+                <div class="card text-center">
+                    <div class="card-header">
+                        Total Medicine Soldout
+                    </div>
+                    <div class="card-body">
+                        100
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 py-2">
+                <div class="card text-center">
+                    <div class="card-header">
+                        Total Medicine Available
+                    </div>
+                    <div class="card-body">
+                        100
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 py-2">
+                <div class="card text-center">
+                    <div class="card-header">
+                        Total Ayurvedic Stock
+                    </div>
+                    <div class="card-body">
+                        100
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 py-2">
+                <div class="card text-center">
+                    <div class="card-header">
+                        Total Ayurvedic Soldout
+                    </div>
+                    <div class="card-body">
+                        100
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 py-2">
+                <div class="card text-center">
+                    <div class="card-header">
+                        Total Ayurvedic Available
+                    </div>
+                    <div class="card-body">
+                        100
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 py-2">
+                <div class="card text-center">
+                    <div class="card-header">
+                        Total Homeopathy Stock
+                    </div>
+                    <div class="card-body">
+                        100
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 py-2">
+                <div class="card text-center">
+                    <div class="card-header">
+                        Total Homeopathy Soldout
+                    </div>
+                    <div class="card-body">
+                        100
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 py-2">
+                <div class="card text-center">
+                    <div class="card-header">
+                        Total Homeopathy Available
+                    </div>
+                    <div class="card-body">
+                        100
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 py-2">
+                <div class="card text-center">
+                    <div class="card-header">
+                        Total <br> Allopathic Available
+                    </div>
+                    <div class="card-body">
+                        100
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 py-2">
+                <div class="card text-center">
+                    <div class="card-header">
+                        Total <br> Allopathic Soldout
+                    </div>
+                    <div class="card-body">
+                        100
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 py-2">
+                <div class="card text-center">
+                    <div class="card-header">
+                        Total <br> Allopathic Available
+                    </div>
+                    <div class="card-body">
+                        100
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="best-seller">
+        <h5>Best Seller Medicines</h5>
+        <owl-carousel-o [options]="customOptions">
+            <ng-template carouselSlide>
+                <div class="card me-2" style="width: 15rem;">
+                    <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWVkaWNpbmV8ZW58MHx8MHx8&w=1000&q=80" class="" alt="..." height="135">
+                    <div class="card-body">
+                        <h5 class="card-title">Name</h5>
+                        <p class="card-text">Category <span class="float-end">786</span></p>
+                    </div>
+                </div>
+                <!-- <img src="../../../assets/images/background-pic.jpg">
+                <div>Dinesh</div> -->
+            </ng-template>
+            <ng-template carouselSlide>
+                <div class="card" style="width: 15rem;">
+                    <img src="../../../assets/images/background-pic.jpg" class="card-img-top" alt="..." height="135">
+                    <div class="card-body">
+                        <h5 class="card-title">Name</h5>
+                        <p class="card-text">Category <span class="float-end">786</span></p>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template carouselSlide>
+                <div class="card" style="width: 15rem;">
+                    <img src="../../../assets/images/background-pic.jpg" class="card-img-top" alt="..." height="135">
+                    <div class="card-body">
+                        <h5 class="card-title">Name</h5>
+                        <p class="card-text">Category <span class="float-end">786</span></p>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template carouselSlide>
+                <div class="card" style="width: 15rem;">
+                    <img src="../../../assets/images/background-pic.jpg" class="card-img-top" alt="..." height="135">
+                    <div class="card-body">
+                        <h5 class="card-title">Name</h5>
+                        <p class="card-text">Category <span class="float-end">786</span></p>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template carouselSlide>
+                <div class="card" style="width: 15rem;">
+                    <img src="../../../assets/images/background-pic.jpg" class="card-img-top" alt="..." height="135">
+                    <div class="card-body">
+                        <h5 class="card-title">Name</h5>
+                        <p class="card-text">Category <span class="float-end">786</span></p>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template carouselSlide>
+                <div class="card" style="width: 15rem;">
+                    <img src="../../../assets/images/background-pic.jpg" class="card-img-top" alt="..." height="135">
+                    <div class="card-body">
+                        <h5 class="card-title">Name</h5>
+                        <p class="card-text">Category <span class="float-end">786</span></p>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template carouselSlide>
+                <div class="card" style="width: 15rem;">
+                    <img src="../../../assets/images/background-pic.jpg" class="card-img-top" alt="..." height="135">
+                    <div class="card-body">
+                        <h5 class="card-title">Name</h5>
+                        <p class="card-text">Category <span class="float-end">786</span></p>
+                    </div>
+                </div>
+            </ng-template>
+        </owl-carousel-o>
+    </section>
+</div>

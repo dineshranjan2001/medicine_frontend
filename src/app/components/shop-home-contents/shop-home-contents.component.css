@@ -1,0 +1,13 @@
+ h5{
+    color: #036a6b;
+    font-size: 23px;
+}
+.card-header{
+    background-color: #089193;
+    color: white;
+}
+.card{
+    border:none;
+    background-color: rgb(231, 228, 228);
+    color: #055051;
+}

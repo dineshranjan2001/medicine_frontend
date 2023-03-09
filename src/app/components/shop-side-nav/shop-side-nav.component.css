@@ -1,0 +1,71 @@
+.shop-sidenav{
+    background-color: #037072;
+    height: 100%;
+    width: 320px
+    
+}
+.shop-dashboard-logo-section{
+    text-align: center;
+    padding: 30px 0px 20px 0px;
+    color: white;
+}
+.shop-dashboard-logo-section img{
+    height: 80px;
+    width: 80px;
+    background-color:wheat;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px 10px #989797;
+    margin-bottom:20px ;
+}
+hr{
+    color: rgb(255, 255, 255);
+    height: 3px;
+    border-radius: 3px;
+}
+.shop-name-email-section{
+    text-align: center;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+.shop-name-email-section span{
+    background-color: white;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 22px;
+    color: #35a5a7;
+    box-shadow: 0px 0px 5px 3px #989797;
+    font-weight: bold;
+}
+.shop-name-email-section h6{
+    margin-top: 15px;
+    font-size: 13px;
+}
+.shop-menu-section{
+    margin-left:20px ;
+    color: white;
+    font-size: 18px;
+}
+.shop-menu-section .menu-items{
+    padding: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.shop-menu-section .menu-items:hover{
+    color: #35a5a7;
+    background-color: white;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+.shop-menu-section .menu-items:focus{
+    background-color: white;
+}
+.shop-copyright-section{
+    color: white;
+    padding-bottom:10px;
+    margin-top: -8px;
+    padding-left: 60px;
+    position: relative;
+    bottom: 0;
+}
