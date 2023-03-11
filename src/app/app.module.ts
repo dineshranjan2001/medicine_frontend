@@ -19,6 +19,8 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { Ng2OrderModule } from 'ng2-order-pipe';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { FormsModule } from '@angular/forms';
+import { ShopAddMedicinesContentsComponent } from './components/shop-add-medicines-contents/shop-add-medicines-contents.component';
+import { ShopUpdateMedicinesContentsComponent } from './components/shop-update-medicines-contents/shop-update-medicines-contents.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,6 +35,8 @@ import { FormsModule } from '@angular/forms';
     ShopHomeContentsComponent,
     ShopMystoreContentsComponent,
     ShopMystoreShowcategoriesComponent,
+    ShopAddMedicinesContentsComponent,
+    ShopUpdateMedicinesContentsComponent,
   ],
   imports: [
     BrowserModule,
