@@ -5,6 +5,7 @@ h5{
 .card{
     background-color: rgba(244, 241, 241, 0.586);
     border: 1px solid rgb(240, 237, 237);
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }
 .form-control,.form-select{
     border: 1px solid #199fa3;

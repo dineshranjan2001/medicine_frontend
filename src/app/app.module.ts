@@ -21,6 +21,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { FormsModule } from '@angular/forms';
 import { ShopAddMedicinesContentsComponent } from './components/shop-add-medicines-contents/shop-add-medicines-contents.component';
 import { ShopUpdateMedicinesContentsComponent } from './components/shop-update-medicines-contents/shop-update-medicines-contents.component';
+import { ShopProfileContentsComponent } from './components/shop-profile-contents/shop-profile-contents.component';
+import { ShopUpdateProfileContentsComponent } from './components/shop-update-profile-contents/shop-update-profile-contents.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +39,8 @@ import { ShopUpdateMedicinesContentsComponent } from './components/shop-update-m
     ShopMystoreShowcategoriesComponent,
     ShopAddMedicinesContentsComponent,
     ShopUpdateMedicinesContentsComponent,
+    ShopProfileContentsComponent,
+    ShopUpdateProfileContentsComponent,
   ],
   imports: [
     BrowserModule,

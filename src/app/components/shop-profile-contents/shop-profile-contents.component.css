@@ -1,0 +1,57 @@
+h5{
+    color: #036a6b;
+    font-size: 23px;
+}
+.main-card{
+    border: none;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    padding-bottom: 0px;
+}
+.shop-header{
+    position: absolute;
+    margin-top: -16px;
+    font-size: 20px;
+    background-color: white;
+    margin-left: 10px;
+    color: #036a6b;
+}
+.shop-details{
+    border: 1px solid #506b1b;
+    width: 70%;
+    height: auto;
+    
+}
+.shop-details-section img{
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    border: 6px solid #048b8d;
+}
+.shop-contents{
+    padding: 35px 0px 0px 16px;
+    color: #036a6b;
+}
+.content-center{
+    padding-left: 15rem;
+}
+.font-set{
+    font-size: 18px;
+    color: #036a6b;
+}
+.edit-btn{
+    color: #036a6b;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 15px 0px 0px 17px;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+
+}
+.edit-btn:hover{
+    background-color: rgb(200, 191, 191);
+    border-radius: 50%;
+}
+.footer-section{
+    height: 4.6rem;
+}
