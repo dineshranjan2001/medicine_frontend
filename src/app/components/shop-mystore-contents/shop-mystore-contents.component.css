@@ -1,0 +1,90 @@
+h5{
+    color: #036a6b;
+    font-size: 23px;
+}
+.shop-categories-section .card{
+    background-color: #199fa3;
+    border: none;
+    transition: 0.3s;
+}
+.shop-categories-section .card:hover{
+    background-color: #3ab0b2;
+    border: none;
+}
+ img{
+    background-color: #f5deb3;
+    border-radius: 50%;
+    padding: 6px;
+    width: 70px;
+    height: 70px;
+    margin-right: 15px;
+}
+.shop-categories-section span{
+    color: white;
+    font-size: 18px;
+    position: relative;
+    cursor: pointer;
+    padding-bottom: 3px;
+}
+.shop-categories-section span:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fa5162;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+.shop-categories-section span:hover:after{
+    transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.all-medicine-details-sections .card{
+    border: none;
+}
+.all-medicine-details-sections .card-header{
+    background-color: #199fa3;
+    color: white;
+}
+.all-medicine-details-sections .card-body{
+    background-color: rgb(247, 244, 244);
+    border-radius: 4px;
+}
+.all-medicine-details-sections span{
+    color: white;
+    font-size: 18px;
+    position: relative;
+    cursor: pointer;
+    padding-bottom: 3px;
+}
+.fa-edit{
+    color: #199fa3;
+    font-size: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    box-shadow: 5px -23px 27px 0px rgba(0, 0, 0, 0.25);
+}
+.fa-trash-o{
+    color: rgb(232, 31, 31);
+    font-size: 20px; 
+    cursor: pointer;  
+}
+.fa-edit:hover, .fa-trash-o:hover{
+    transform: scale(1.2);
+}
+table thead{
+    background-color:#036a6b ;
+    color: white;
+}
+table tbody tr{
+    color: green;
+}
+.form-control{
+    border: 1px solid #199fa3;
+}
+table{
+    border: #036a6b !important;
+}

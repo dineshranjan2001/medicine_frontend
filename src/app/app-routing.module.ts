@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ShopHomeContentsComponent } from './components/shop-home-contents/shop-home-contents.component';
+import { ShopMystoreContentsComponent } from './components/shop-mystore-contents/shop-mystore-contents.component';
 import { ShopDashboardComponent } from './pages/shop-dashboard/shop-dashboard.component';
 import { ShopSignInComponent } from './pages/shop-sign-in/shop-sign-in.component';
 import { ShopSignUpComponent } from './pages/shop-sign-up/shop-sign-up.component';
@@ -29,17 +30,25 @@ const routes: Routes = [
     pathMatch:"full"
   },
   {
-    path:"shop-home-dashboard",
+    path:'shop-dashboard',
     component:ShopDashboardComponent,
-    pathMatch:"full",
     children:[
       {
         path:'',
-        component:ShopHomeContentsComponent
+        redirectTo:'home',
+        pathMatch:'full'
+      },
+      {
+        path:'home',
+        component:ShopHomeContentsComponent,  
+      },
+      {
+        path:'mystore',
+        component:ShopMystoreContentsComponent
       }
     ]
     
-  }
+  },
 ];
 
 @NgModule({

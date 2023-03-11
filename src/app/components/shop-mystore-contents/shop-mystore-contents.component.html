@@ -1,0 +1,80 @@
+<div class="container px-5 pt-4">
+    <section class="shop-categories-section">
+        <h5>Categories</h5>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <img src="../../../assets/images/Ayurvedic-logo.png" alt="" class="img-fluid">
+                        <span (click)="showComponent()">Ayurvedic Medicine</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <img src="../../../assets/images/Homeopathy-logo.png" alt="" class="img-fluid">
+                        <span (click)="showComponent()">Homeopathy Medicine</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <img src="../../../assets/images/Allopathic-logo.png" alt="" class="img-fluid">
+                        <span (click)="showComponent()">Allopathic Medicine</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="show-categories-section">
+        <ng-container #showCategories></ng-container>
+        <!-- <app-shop-mystore-showcategories></app-shop-mystore-showcategories> -->
+    </section>
+
+    <section class="all-medicine-details-sections pt-4">
+        <h5>All Medicines Information</h5>
+      <div class="row pt-2">
+        <div class="card">
+            <div class="card-header">
+                <img src="../../../assets/images/medicine-logo.png" alt="" class="img-fluid">
+                <span>Medicine Details</span> 
+            </div>
+            <div class="card-body">
+                <div class="col-md-4 pb-3">
+                    <input type="text" class="form-control" placeholder="Enter Medicine Name Here..">
+                </div>
+                <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th scope="col">Sl No.</th>
+                        <th scope="col">Medicine Name</th>
+                        <th scope="col">Manufacture Name</th>
+                        <th scope="col">Medicine Price</th>
+                        <th scope="col">Add/Update Date</th>
+                        <th scope="col">In Stock</th>
+                        <th scope="col">Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                        <td class="text-center">
+                            <i class="fa fa-edit"></i>
+                            <i class="fa fa-trash-o"></i>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+      </div>  
+    </section>
+</div>

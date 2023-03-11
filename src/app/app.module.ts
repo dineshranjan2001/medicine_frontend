@@ -13,7 +13,12 @@ import { ShopSignUpComponent } from './pages/shop-sign-up/shop-sign-up.component
 import { ShopDashboardComponent } from './pages/shop-dashboard/shop-dashboard.component';
 import { ShopSideNavComponent } from './components/shop-side-nav/shop-side-nav.component';
 import { ShopHomeContentsComponent } from './components/shop-home-contents/shop-home-contents.component';
-
+import { ShopMystoreContentsComponent } from './components/shop-mystore-contents/shop-mystore-contents.component';
+import { ShopMystoreShowcategoriesComponent } from './components/shop-mystore-showcategories/shop-mystore-showcategories.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { Ng2OrderModule } from 'ng2-order-pipe';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,12 +31,18 @@ import { ShopHomeContentsComponent } from './components/shop-home-contents/shop-
     ShopDashboardComponent,
     ShopSideNavComponent,
     ShopHomeContentsComponent,
+    ShopMystoreContentsComponent,
+    ShopMystoreShowcategoriesComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CarouselModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    Ng2SearchPipeModule,
+    Ng2OrderModule,
+    NgxPaginationModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
