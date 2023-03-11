@@ -10,11 +10,11 @@
     </div>
     <hr>
     <div class="shop-menu-section">
-        <div class="menu-items"><i class="fa fa-home"></i> Home</div>
-        <div class="menu-items"><i class="fa fa-building"></i> My Store</div>
-        <div class="menu-items"><i class="fa fa-plus"></i> Add Medicine</div>
-        <div class="menu-items"><i class="fa fa-address-card"></i> Profile</div>
-        <div class="menu-items"><i class="fa fa-power-off"></i> Logout</div>
+        <a class="menu-items" [routerLink]="['home']"><i class="fa fa-home"></i> Home</a>
+        <a class="menu-items" [routerLink]="['mystore']"><i class="fa fa-building"></i> My Store</a>
+        <a class="menu-items" [routerLink]="['add-medicine']"><i class="fa fa-plus"></i> Add Medicine</a>
+        <a class="menu-items" [routerLink]="['profile']"><i class="fa fa-address-card"></i> Profile</a>
+        <a class="menu-items" [routerLink]="['logout']"><i class="fa fa-power-off"></i> Logout</a>
     </div>
     <!-- <hr> -->
     <!-- <div class="shop-copyright-section">
