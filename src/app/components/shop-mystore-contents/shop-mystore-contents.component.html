@@ -5,7 +5,7 @@
             <div class="col-md-4">
                 <div class="card text-center">
                     <div class="card-body">
-                        <img src="../../../assets/images/Ayurvedic-logo.png" alt="" class="img-fluid">
+                        <img src="../../../assets/images/Ayurvedic-logo.png" alt="" class="img-fluid img-decore">
                         <span (click)="showComponent()">Ayurvedic Medicine</span>
                     </div>
                 </div>
@@ -13,7 +13,7 @@
             <div class="col-md-4">
                 <div class="card text-center">
                     <div class="card-body">
-                        <img src="../../../assets/images/Homeopathy-logo.png" alt="" class="img-fluid">
+                        <img src="../../../assets/images/Homeopathy-logo.png" alt="" class="img-fluid img-decore">
                         <span (click)="showComponent()">Homeopathy Medicine</span>
                     </div>
                 </div>
@@ -21,7 +21,7 @@
             <div class="col-md-4">
                 <div class="card text-center">
                     <div class="card-body">
-                        <img src="../../../assets/images/Allopathic-logo.png" alt="" class="img-fluid">
+                        <img src="../../../assets/images/Allopathic-logo.png" alt="" class="img-fluid img-decore">
                         <span (click)="showComponent()">Allopathic Medicine</span>
                     </div>
                 </div>
@@ -39,7 +39,7 @@
       <div class="row pt-2">
         <div class="card">
             <div class="card-header">
-                <img src="../../../assets/images/medicine-logo.png" alt="" class="img-fluid">
+                <img src="../../../assets/images/medicine-logo.png" alt="" class="img-fluid img-decore">
                 <span>Medicine Details</span> 
             </div>
             <div class="card-body">
@@ -67,8 +67,8 @@
                         <td>@mdo</td>
                         <td>@mdo</td>
                         <td class="text-center">
-                            <i class="fa fa-edit"></i>
-                            <i class="fa fa-trash-o"></i>
+                           <a [routerLink]="['../update-medicine/']"><i class="fa fa-edit"></i></a>
+                            <i class="fa fa-trash-o" (click)="confirmBox()"></i>
                         </td>
                       </tr>
                     </tbody>

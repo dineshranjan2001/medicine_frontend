@@ -1,65 +1,81 @@
 <div class="container px-5 pt-4">
     <section class="shop-add-medicine-section">
         <h5><i class="fa fa-hand-o-right"></i> Update Medicine Details</h5>
-        <div class="row">
-            <div class="card my-3">
-                <div class="card-body">
-                    <div class="row my-3">
-                        <div class="col-md-9"></div>
-                        <div class="col-md-3">
-                            <button class="btn btn-success float-end"><i class="fa fa-edit"></i> Update Medicine</button>
+        <form #updateMedicineDetailsForm="ngForm" (ngSubmit)="onSubmit(updateMedicineDetailsForm)">
+            <div class="row">
+                <div class="card my-3">
+                    <div class="card-body">
+                        <div class="row my-3">
+                            <div class="col-md-9">
+                                <a [routerLink]="['../mystore']"><i class="fa fa-long-arrow-left back-btn"></i></a>
+                            </div>
+                            <div class="col-md-3">
+                                <button class="btn btn-success float-end"><i class="fa fa-edit"></i> Update
+                                    Medicine</button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-1"></div>
-                        <div class="col-md-4 text-center img-section">
-                            <img src="../../../assets/images/update-medicine-logo.png" alt="">
-                        </div>
-                        <div class="col-md-6">
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="mb-2">
-                                        <label for="">Medicine Name</label>
-                                        <input type="text" name="" id="" class="form-control" placeholder="Enter Medicine Name Here...">
+                        <div class="row">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-4 text-center img-section">
+                                <img src="../../../assets/images/update-medicine-logo.png" alt="">
+                            </div>
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="mb-2">
+                                            <label for="">Medicine Name</label>
+                                            <input type="text" [(ngModel)]="showMedicineDetails.medicineName"
+                                                name="medicineName" id="medicineName" class="form-control"
+                                                placeholder="Enter Medicine Name Here...">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mb-2">
+                                            <label for="">Medicine Category</label>
+                                            <select id="selectId" class="form-select" aria-label="" (change)="selectedDropdrowValue()">
+                                                <option selected [value]="0">---Select Medicine Category---</option>
+                                                <option *ngFor='let showMedicineCategory of showMedicineCategories'
+                                                    [selected]="showMedicineCategory.categoryId===showMedicineDetails.categoryId"
+                                                    [value]="showMedicineCategory.categoryId">
+                                                    {{showMedicineCategory.categoryName}}</option>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="mb-2">
-                                        <label for="">Medicine Category</label>
-                                        <select class="form-select" aria-label="Default select example">
-                                            <option selected>---Select Medicine Category---</option>
-                                            <option value="1">Ayurvedic</option>
-                                            <option value="2">Homeopathy</option>
-                                            <option value="3">Allopathic</option>
-                                          </select>
-                                    </div>
+                                <div class="mb-2">
+                                    <label for="">Manufacture Name</label>
+                                    <input type="text" [(ngModel)]="showMedicineDetails.manufactureName"
+                                        name="manufactureName" id="manufactureName" class="form-control"
+                                        placeholder="Enter Manufacture Name Here...">
+                                </div>
+                                <div class="mb-2">
+                                    <label for="">Medicine Photo</label>
+                                    <input type="file" name="" id="medicinePhoto" class="form-control" (change)="onFileChanged($event)">
+                                </div>
+                                <div class="mb-2">
+                                    <label for="">Medicine Price</label>
+                                    <input type="text" [(ngModel)]="showMedicineDetails.medicinePrice"
+                                        name="medicinePrice" id="medicinePrice" class="form-control"
+                                        placeholder="Enter Medicine Price Here...">
+                                </div>
+                                <div class="mb-2">
+                                    <label for="">Medicine Quantity</label>
+                                    <input type="text" [(ngModel)]="showMedicineDetails.medicineQuantity"
+                                        name="medicineQuantity" id="medicineQuantity" class="form-control"
+                                        placeholder="Enter Medicine Quantity Here...">
+                                </div>
+                                <div class="mb-2">
+                                    <label for="">Medicine Description</label>
+                                    <textarea name="medicineDesc" [(ngModel)]="showMedicineDetails.medicineDesc" id="medicineDesc"
+                                        class="form-control" rows="3"
+                                        placeholder="Enter Medicine Description/Uses Here..."></textarea>
                                 </div>
                             </div>
-                            <div class="mb-2">
-                                <label for="">Manufacture Name</label>
-                                <input type="text" name="" id="" class="form-control" placeholder="Enter Manufacture Name Here...">
-                            </div>
-                            <div class="mb-2">
-                                <label for="">Medicine Photo</label>
-                                <input type="file" name="" id="" class="form-control">
-                            </div>
-                            <div class="mb-2">
-                                <label for="">Medicine Price</label>
-                                <input type="number" name="" id="" class="form-control" placeholder="Enter Medicine Price Here...">
-                            </div>
-                            <div class="mb-2">
-                                <label for="">Medicine Quantity</label>
-                                <input type="number" name="" id="" class="form-control" placeholder="Enter Medicine Quantity Here...">
-                            </div>
-                            <div class="mb-2">
-                                <label for="">Medicine Description</label>
-                               <textarea name="" id="" class="form-control" rows="3" placeholder="Enter Medicine Description/Uses Here..."></textarea>
-                            </div>
+                            <div class="col-md-1"></div>
                         </div>
-                        <div class="col-md-1"></div>
                     </div>
                 </div>
             </div>
-        </div>
+        </form>
     </section>
 </div>

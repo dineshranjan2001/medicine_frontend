@@ -31,6 +31,7 @@ const routes: Routes = [
   {
     path:"shop-sign-up",
     component:ShopSignUpComponent,
+    title:"Shop Register Here",
     pathMatch:"full"
   },
   {

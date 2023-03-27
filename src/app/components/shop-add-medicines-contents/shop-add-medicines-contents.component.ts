@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { AddMedicine } from 'src/app/Modelclass/add-medicine';
+import { AddMedicineService } from 'src/app/services/add-medicine.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-shop-add-medicines-contents',
@@ -7,9 +11,138 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShopAddMedicinesContentsComponent implements OnInit {
 
-  constructor() { }
+   
+
+  nameChecker: RegExp = /[A-Za-z-0-9]+/
+  descChecker: RegExp = /^[a-zA-Z ]{3,60}$/;
+  priceandquantityChecker:RegExp=/^[0-9]+$/;
+
+  public showMedicineCategories!:AddMedicine[];
+  addMedicine:AddMedicine=new AddMedicine();
+
+
+  constructor(private addMedicineService:AddMedicineService) { }
+  selectedFile!:any
 
   ngOnInit(): void {
+    this.addMedicineService.medicineCategoriesDetails().subscribe((response)=>{
+      this.showMedicineCategories=response;
+    });
   }
 
+  onFileChanged(event:any){
+    this.selectedFile=event.target.files[0];
+    console.log(this.selectedFile);
+  }
+
+  selectedDropdrowValue(){
+   let value=(<HTMLInputElement>document.getElementById('selectId')).value;
+   console.log(value);
+   this.addMedicine.categoryId=parseInt(value);
+  }
+
+  onSubmit(medicineDetailsForm:NgForm){
+    if (!this.nameChecker.test((<HTMLInputElement>document.getElementById('medicineName')).value)) {
+      Swal.fire({      
+        text: 'Please Give Valid Medicine Name...',
+        color:'red',
+        showConfirmButton: false,
+        timer: 1500
+      })
+    }else if (!this.descChecker.test((<HTMLInputElement>document.getElementById('manufactureName')).value)){
+      Swal.fire({      
+        text: 'Please Give Valid Manufacture Name...',
+        color:'red',
+        showConfirmButton: false,
+        timer: 1500
+      })
+    }else if ((<HTMLInputElement>document.getElementById('medicinePhoto')).value==null || (<HTMLInputElement>document.getElementById('medicinePhoto')).value==""){
+      Swal.fire({      
+        text: 'Please Give Medicine Photo...',
+        color:'red',
+        showConfirmButton: false,
+        timer: 1500
+      })
+    }
+    else if(!this.priceandquantityChecker.test((<HTMLInputElement>document.getElementById('medicinePrice')).value)){
+      Swal.fire({      
+        text: 'Please Give Valid Price...',
+        color:'red',
+        showConfirmButton: false,
+        timer: 1500
+      })
+    }else if(!this.priceandquantityChecker.test((<HTMLInputElement>document.getElementById('medicineQuantity')).value)){
+      Swal.fire({      
+        text: 'Please Give Valid Quantity...',
+        color:'red',
+        showConfirmButton: false,
+        timer: 1500
+      })
+    }else if(!this.descChecker.test((<HTMLInputElement>document.getElementById('medicineDesc')).value)){
+      Swal.fire({      
+        text: 'Please Give Valid Medicine Description...',
+        color:'red',
+        showConfirmButton: false,
+        timer: 1500
+      })
+    }else{
+      console.log(this.addMedicine);
+      const uploadData = new FormData();
+      uploadData.append('imageFile',this.selectedFile,this.selectedFile.name);
+      this.addMedicineService.uploadImage(uploadData).subscribe((response)=>{
+        if(response.status==200){
+          this.addMedicineService.saveMedicineDetails(this.addMedicine).subscribe(
+            (response1)=>{
+             if(response1.status==200){
+              Swal.fire({
+                icon: 'success',
+                title: 'Successfully Saved...',
+                confirmButtonColor: '#35a5a7',
+                confirmButtonText: 'Ok'
+              }).then((result) => {
+                if (result.isConfirmed) {
+                  medicineDetailsForm.reset();
+                }
+              });
+             }else if(response1.status==302){
+              Swal.fire({
+                icon: 'error',
+                title: 'Medicine Already Present...',
+                confirmButtonColor: '#35a5a7',
+                confirmButtonText: 'Ok'
+              }).then((result) => {
+                if (result.isConfirmed) {
+                  medicineDetailsForm.reset();
+                }
+              });
+             }else if(response1.status==500){
+              Swal.fire({
+                icon: 'error',
+                title: 'Not Save',
+                confirmButtonColor: '#35a5a7',
+                confirmButtonText: 'Ok'
+              }).then((result) => {
+                if (result.isConfirmed) {
+                  medicineDetailsForm.reset();
+                }
+              });
+             }else{
+              Swal.fire({
+                icon: 'error',
+                title: 'Some thing went wrong...',
+                confirmButtonColor: '#35a5a7',
+                confirmButtonText: 'Ok'
+              }).then((result) => {
+                if (result.isConfirmed) {
+                  medicineDetailsForm.reset();
+                }
+              });
+             }
+            }
+          )
+        }
+      });
+
+    }
+  }
 }

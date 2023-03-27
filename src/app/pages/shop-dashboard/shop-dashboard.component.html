@@ -1,5 +1,5 @@
 <body>
-  <div [ngClass]="status ? 'toggled' : ''" class="d-flex" id="wrapper">
+  <div class="d-flex" id="wrapper">
     <div class="side-nav">
       <app-shop-side-nav></app-shop-side-nav>
     </div>
@@ -8,10 +8,10 @@
         <nav class="navbar">
           <div class="container-fluid">
             <span class="bar-icon-section">
-              <i class="fa fa-bars" (click)="addToggle()"></i> Dashboard
+              <i class="fa fa-bars"></i> Dashboard
             </span>
-            <div class="profile-short-name">
-              JMS
+            <div class="">
+             <img src="../../../assets/images/background-pic.jpg" alt="" class="img-fluid profile-short-name">
             </div>
           </div>
         </nav>

@@ -7,7 +7,7 @@
             </div>
             <div class="col-md-6 text-section">
                 <h2 class="card-title pb-3">Sign Up Here...</h2>
-                <form method="post">
+                <form #shopRegistrationForm="ngForm" (ngSubmit)="onSubmit(shopRegistrationForm)">
                     <!-- owner info section -->
                     <div class="row owner-info-section" *ngIf="showOwnerSection">
                         <div class="owner-info-header">
@@ -17,7 +17,7 @@
                             <div class="mb-2">
                                 <label for="ownerFirstName" class="form-label signin-text">First Name<span
                                         class="text-danger">*</span> </label> <input type="text"
-                                    class="form-control ownerDetils" id="ownerFirstName" name="first_name"
+                                    class="form-control ownerDetils" id="ownerFirstName" [(ngModel)]="shop.ownerFirstName" name="ownerFirstName"
                                     placeholder="Enter First Name Here" required>
                             </div>
                         </div>
@@ -25,7 +25,7 @@
                             <div class="mb-2">
                                 <label for="ownerLastName" class="form-label signin-text">Last Name<span
                                         class="text-danger">*</span> </label> <input type="text"
-                                    class="form-control ownerDetils" id="ownerLastName" name="last_name"
+                                    class="form-control ownerDetils" id="ownerLastName" [(ngModel)]="shop.ownerLastName" name="ownerLastName"
                                     placeholder="Enter Last Name Here" required>
                             </div>
                         </div>
@@ -33,7 +33,7 @@
                             <div class="mb-4">
                                 <label for="ownerPhone" class="form-label signin-text">Phone<span
                                         class="text-danger">*</span></label> <input type="text"
-                                    class="form-control ownerDetils" id="ownerPhone" name="last_name"
+                                    class="form-control ownerDetils" id="ownerPhone" [(ngModel)]="shop.ownerPhone" name="ownerPhone"
                                     placeholder="Enter Phone Number Here" required>
                             </div>
                         </div>
@@ -63,43 +63,43 @@
                         <div class="col-md-6">
                             <div class="mb-2">
                                 <label for="firstName" class="form-label signin-text">Name </label> <input type="text"
-                                    class="form-control" id="shopName" name="first_name"
+                                    class="form-control" id="shopName" [(ngModel)]="shop.shopName" name="shopName"
                                     placeholder="Enter Shop Name Here" required>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="mb-2">
                                 <label for="firstName" class="form-label signin-text">Phone </label> <input type="text"
-                                    class="form-control" id="shopPhone" name="first_name"
+                                    class="form-control" id="shopPhone" [(ngModel)]="shop.shopPhone" name="shopPhone"
                                     placeholder="Enter Phone Number Here" required>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="mb-2">
-                                <label for="firstName" class="form-label signin-text">Username </label> <input
-                                    type="text" class="form-control" id="shopUsername" name="first_name"
-                                    placeholder="Enter Username Here" required disabled>
+                                <label for="firstName" class="form-label signin-text">Email </label> <input
+                                    type="email" class="form-control" id="shopEmail" [(ngModel)]="shop.shopEmail" name="shopEmail"
+                                    placeholder="Enter Email Here" required >
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="mb-2">
                                 <label for="firstName" class="form-label signin-text">Password </label> <input
-                                    type="password" class="form-control" id="shopPassword" name="first_name"
+                                    type="password" class="form-control" id="shopPassword" [(ngModel)]="shop.shopPassword" name="shopPassword"
                                     placeholder="Enter Password Here" required>
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="mb-2">
                                 <label for="firstName" class="form-label signin-text">Photo </label> <input type="file"
-                                    class="form-control" id="image-upload" name="first_name"
-                                    placeholder="Enter Shop Photo Here" required (change)="selectFile($event)">
+                                    class="form-control" id="image-upload"
+                                    placeholder="Enter Shop Photo Here" required (change)="selectFile($event)" required>
                             </div>
                         </div>
                         <div class="col-md-12 mb-3">
                             <div class="mb-2">
                                 <label for="firstName" class="form-label signin-text">Address </label>
-                                <textarea name="" class="form-control" [rows]="3" id="" cols="30" rows="10"
-                                    placeholder="Enter Shop Address Here"></textarea>
+                                <textarea [(ngModel)]="shop.shopAddress"  name="shopAddress" class="form-control" [rows]="3" id="" cols="30" rows="10"
+                                    placeholder="Enter Shop Address Here" #shopAddress required></textarea>
                             </div>
                         </div>
                     </div>
@@ -107,7 +107,7 @@
                     <div class="row" *ngIf="showRegisterBtn">
                         <div class="col-md-5"></div>
                         <div class="col-md-7 ms-auto">
-                            <button type="submit" class="btn btn-success float-end" (click)="onSubmit()">
+                            <button type="submit" class="btn btn-success float-end">
                                 Register <i class="fa fa-send-o"></i>
                             </button>
                             <div class="next-btn float-end me-3" (click)="backTo()"><i

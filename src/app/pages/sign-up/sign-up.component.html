@@ -7,36 +7,36 @@
 			</div>
 			<div class="col-md-6 text-section">
 				<h2 class="card-title pb-3">Sign Up Here...</h2>
-				<form method="post">
+				<form (ngSubmit)="submitRegistration()" method="post">
 					<div class="row">
 						<div class="col-md-6">
 							<div class="mb-3">
 								<label for="firstName" class="form-label signin-text">First Name </label> <input
-									type="text" class="form-control" id="firstName" name="first_name"
+									type="text" class="form-control" id="firstName" [(ngModel)]="customer.customerFirstName" name="customerFirstName" 
 									placeholder="Enter First Name Here" required>
 							</div>
 						</div>
 						<div class="col-md-6">
 							<div class="mb-3">
 								<label for="password" class="form-label signin-text">Last Name </label> <input
-									type="lastName" class="form-control" id="lastName" name="last_name"
+									type="lastName" class="form-control" id="lastName" [(ngModel)]="customer.customerLastName" name="customerLastName"
 									placeholder="Enter Last Name Here" required>
 							</div>
 						</div>
 					</div>
 					<div class="mb-3">
 						<label for="Phone" class="form-label signin-text">Phone </label> <input type="text"
-							class="form-control" id="Phone" name="email" placeholder="Enter Phone Number Here" required>
+							class="form-control" id="Phone" [(ngModel)]="customer.customerPhone" name="customerPhone" placeholder="Enter Phone Number Here" required>
 					</div>
 
 					<div class="mb-3">
 						<label for="email" class="form-label signin-text">Email </label> <input type="email"
-							class="form-control" id="email" name="email" placeholder="Enter Email Here" required>
+							class="form-control" id="email" [(ngModel)]="customer.customerEmail" name="customerEmail" placeholder="Enter Email Here" required>
 					</div>
 
 					<div class="mb-3">
 						<label for="password" class="form-label signin-text">Password </label> <input type="password"
-							class="form-control" id="password" name="password" placeholder="Enter Password Here"
+							class="form-control" id="password" [(ngModel)]="customer.customerPassword" name="customerPassword" placeholder="Enter Password Here"
 							required>
 					</div>
 					<div class="row">

@@ -61,9 +61,9 @@ hr{
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
 }
-.shop-menu-section .menu-items:focus{
-    color: #35a5a7;
+.active{
     background-color: white;
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
+    color: #35a5a7 !important;
 }

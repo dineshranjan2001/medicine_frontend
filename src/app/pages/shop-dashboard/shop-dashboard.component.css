@@ -19,11 +19,11 @@
     box-shadow: 1px 2px 7px rgb(204, 201, 201);
 }
 .profile-short-name{
-    background-color: #037072;
+    border: 3px solid #037072;
     border-radius: 50%;
-    padding: 9px 0px 0px 7px;
-    height: 45px;
-    width: 45px;
+    padding: -11px 0px 0px 7px;
+    height: 55px;
+    width: 55px;
     color: white;
     box-shadow: 1px 2px 4px rgb(176, 173, 173);
     cursor: pointer;

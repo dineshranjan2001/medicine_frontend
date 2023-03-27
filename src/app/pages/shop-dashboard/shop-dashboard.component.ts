@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, EventEmitter, HostListener, OnInit, Output, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-shop-dashboard',
@@ -7,14 +7,13 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class ShopDashboardComponent implements OnInit {
-
-  status:boolean=false;
   constructor() { }
 
   ngOnInit(): void {
   }
-
-  addToggle(){
-    this.status=!this.status;
-  }
+  
+  // sideNavToggle(){
+  //   this.menuStatus=!this.menuStatus;
+  //   this.sideNavToggled.emit(this.menuStatus);
+  // }
 }

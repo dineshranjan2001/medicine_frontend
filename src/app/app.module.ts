@@ -23,6 +23,8 @@ import { ShopAddMedicinesContentsComponent } from './components/shop-add-medicin
 import { ShopUpdateMedicinesContentsComponent } from './components/shop-update-medicines-contents/shop-update-medicines-contents.component';
 import { ShopProfileContentsComponent } from './components/shop-profile-contents/shop-profile-contents.component';
 import { ShopUpdateProfileContentsComponent } from './components/shop-update-profile-contents/shop-update-profile-contents.component';
+import { NgxHideOnScrollModule } from 'ngx-hide-on-scroll';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,7 +52,9 @@ import { ShopUpdateProfileContentsComponent } from './components/shop-update-pro
     Ng2SearchPipeModule,
     Ng2OrderModule,
     NgxPaginationModule,
-    FormsModule
+    FormsModule,
+    NgxHideOnScrollModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
