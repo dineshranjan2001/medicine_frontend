@@ -56,7 +56,7 @@ const routes: Routes = [
         component:ShopAddMedicinesContentsComponent
       },
       {
-        path:'update-medicine',
+        path:'update-medicine/:medicineId',
         component:ShopUpdateMedicinesContentsComponent
       },
       {

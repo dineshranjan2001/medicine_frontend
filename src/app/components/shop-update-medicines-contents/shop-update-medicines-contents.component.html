@@ -21,10 +21,18 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="row">
+                                    <div class="col-md-6 mb-2">
+                                        <label class="form-check-label" for="inStock">In Stock</label>&nbsp;
+                                        <input class="form-check-input" type="checkbox" [(ngModel)]="medicineDetails.inStock" name="inStock" id="inStock">
+                                    </div>
+                                    <div class="col-md-6 mb-2">
+                                        <label class="form-check-label" for="inStock">Is BestSeller</label>&nbsp;
+                                        <input class="form-check-input" type="checkbox" [(ngModel)]="medicineDetails.bestSeller" name="bestSeller" id="inStock"> 
+                                    </div>
                                     <div class="col-6">
                                         <div class="mb-2">
                                             <label for="">Medicine Name</label>
-                                            <input type="text" [(ngModel)]="showMedicineDetails.medicineName"
+                                            <input type="text" [(ngModel)]="medicineDetails.medicineName"
                                                 name="medicineName" id="medicineName" class="form-control"
                                                 placeholder="Enter Medicine Name Here...">
                                         </div>
@@ -32,10 +40,11 @@
                                     <div class="col-md-6">
                                         <div class="mb-2">
                                             <label for="">Medicine Category</label>
-                                            <select id="selectId" class="form-select" aria-label="" (change)="selectedDropdrowValue()">
+                                            <select id="selectId" class="form-select" aria-label=""
+                                                (change)="selectedDropdrowValue()">
                                                 <option selected [value]="0">---Select Medicine Category---</option>
                                                 <option *ngFor='let showMedicineCategory of showMedicineCategories'
-                                                    [selected]="showMedicineCategory.categoryId===showMedicineDetails.categoryId"
+                                                    [selected]="showMedicineCategory.categoryId===medicineDetails.categoryId"
                                                     [value]="showMedicineCategory.categoryId">
                                                     {{showMedicineCategory.categoryName}}</option>
                                             </select>
@@ -44,30 +53,31 @@
                                 </div>
                                 <div class="mb-2">
                                     <label for="">Manufacture Name</label>
-                                    <input type="text" [(ngModel)]="showMedicineDetails.manufactureName"
+                                    <input type="text" [(ngModel)]="medicineDetails.manufactureName"
                                         name="manufactureName" id="manufactureName" class="form-control"
                                         placeholder="Enter Manufacture Name Here...">
                                 </div>
                                 <div class="mb-2">
                                     <label for="">Medicine Photo</label>
-                                    <input type="file" name="" id="medicinePhoto" class="form-control" (change)="onFileChanged($event)">
+                                    <input type="file" name="" id="medicinePhoto" class="form-control"
+                                        (change)="onFileChanged($event)">
                                 </div>
                                 <div class="mb-2">
                                     <label for="">Medicine Price</label>
-                                    <input type="text" [(ngModel)]="showMedicineDetails.medicinePrice"
+                                    <input type="text" [(ngModel)]="medicineDetails.medicinePrice"
                                         name="medicinePrice" id="medicinePrice" class="form-control"
                                         placeholder="Enter Medicine Price Here...">
                                 </div>
                                 <div class="mb-2">
                                     <label for="">Medicine Quantity</label>
-                                    <input type="text" [(ngModel)]="showMedicineDetails.medicineQuantity"
+                                    <input type="text" [(ngModel)]="medicineDetails.medicineQuantity"
                                         name="medicineQuantity" id="medicineQuantity" class="form-control"
                                         placeholder="Enter Medicine Quantity Here...">
                                 </div>
                                 <div class="mb-2">
                                     <label for="">Medicine Description</label>
-                                    <textarea name="medicineDesc" [(ngModel)]="showMedicineDetails.medicineDesc" id="medicineDesc"
-                                        class="form-control" rows="3"
+                                    <textarea name="medicineDesc" [(ngModel)]="medicineDetails.medicineDesc"
+                                        id="medicineDesc" class="form-control" rows="3"
                                         placeholder="Enter Medicine Description/Uses Here..."></textarea>
                                 </div>
                             </div>

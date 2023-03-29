@@ -13,4 +13,8 @@ export class UpdateMedicineService {
   public getMedicineById(medicineId:string):Observable<any>{
     return this.http.get(`${baseUrl}/shop-dashboard/update-medicine/${medicineId}`);
   }
+
+  public saveUpdatedMedicineDetails(AddMedicine:any):Observable<any>{
+    return this.http.put(`${baseUrl}/shop-dashboard/update-medicine/`,AddMedicine);
+  }
 }

@@ -88,3 +88,13 @@ table tbody tr{
 table{
     border: #036a6b !important;
 }
+
+.ngx-pagination {
+    background:#03a8ab;
+    text-justify: inter-word;
+    border-radius: 3px;
+    text-decoration: none;
+  }
+ .ngx-pagination .current{
+    background-color: #055051 !important;
+  }

@@ -2,7 +2,7 @@ export class AddMedicine {
     medicineId!:string;;
     medicineName!:string;
     medicinePhoto!:string;
-    fileName!:string;
+    fileName!:any;
     manufactureName!:string;
     medicineDesc!:string;
     categoryId!:number;
@@ -11,6 +11,6 @@ export class AddMedicine {
     medicineQuantity!:number;
     soldoutQuantity!:number
     inStock!:boolean
-    isBestSeller!:boolean
+    bestSeller!:boolean
 
 }

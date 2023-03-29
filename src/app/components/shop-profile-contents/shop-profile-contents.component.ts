@@ -9,12 +9,12 @@ import { ShopProfileService } from 'src/app/services/shop-profile.service';
 })
 export class ShopProfileContentsComponent implements OnInit {
 
-  public profiles!: Shop[];
-  constructor(private shopProfile:ShopProfileService) { }
+  public shopProfile:Shop=new Shop();
+  constructor(private shopProfileService:ShopProfileService) { }
 
   ngOnInit(): void {
-    this.shopProfile.getProfile().subscribe((response)=>{
-      this.profiles=response;
+    this.shopProfileService.getProfile().subscribe((response)=>{
+      this.shopProfile=response;
     });
   }
 

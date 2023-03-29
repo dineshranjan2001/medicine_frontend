@@ -2,27 +2,13 @@
     <section class="shop-categories-section">
         <h5><i class="fa fa-hand-o-right"></i> Categories</h5>
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4" *ngFor="let getCategory of getCategoriesList">
                 <div class="card text-center">
                     <div class="card-body">
-                        <img src="../../../assets/images/Ayurvedic-logo.png" alt="" class="img-fluid img-decore">
-                        <span (click)="showComponent()">Ayurvedic Medicine</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card text-center">
-                    <div class="card-body">
-                        <img src="../../../assets/images/Homeopathy-logo.png" alt="" class="img-fluid img-decore">
-                        <span (click)="showComponent()">Homeopathy Medicine</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card text-center">
-                    <div class="card-body">
-                        <img src="../../../assets/images/Allopathic-logo.png" alt="" class="img-fluid img-decore">
-                        <span (click)="showComponent()">Allopathic Medicine</span>
+                        <img *ngIf="getCategory.categoryName==='Ayurvedic'" src="../../../assets/images/Ayurvedic-logo.png" alt="" class="img-fluid img-decore">
+                        <img *ngIf="getCategory.categoryName==='Homeopathic '" src="../../../assets/images/Homeopathy-logo.png" alt="" class="img-fluid img-decore">
+                        <img *ngIf="getCategory.categoryName==='Allopathic'" src="../../../assets/images/Allopathic-logo.png" alt="" class="img-fluid img-decore">
+                        <span (click)="showComponent(getCategory.categoryId,getCategory.categoryName)">{{getCategory.categoryName}} Medicine</span>
                     </div>
                 </div>
             </div>
@@ -44,35 +30,46 @@
             </div>
             <div class="card-body">
                 <div class="col-md-4 pb-3">
-                    <input type="text" class="form-control" placeholder="Enter Medicine Name Here..">
+                    <input type="text" class="form-control" placeholder="Enter Medicine Name Here.." name="medicineName" [(ngModel)]="medicineName" (ngModelChange)="searchMedicine()">
                 </div>
                 <table class="table table-bordered">
                     <thead>
                       <tr>
-                        <th scope="col">Sl No.</th>
-                        <th scope="col">Medicine Name</th>
-                        <th scope="col">Manufacture Name</th>
-                        <th scope="col">Medicine Price</th>
-                        <th scope="col">Add/Update Date</th>
-                        <th scope="col">In Stock</th>
-                        <th scope="col">Actions</th>
+                        <th scope="col" class="text-center">Sl No.</th>
+                        <th scope="col" class="text-center">Medicine <br> Name</th>
+                        <th scope="col" class="text-center">Manufacture Name</th>
+                        <th scope="col" class="text-center">Medicine Category</th>
+                        <th scope="col" class="text-center">Medicine Price</th>
+                        <th scope="col" class="text-center">Medicine Quantity</th>
+                        <th scope="col" class="text-center">In Stock</th>
+                        <th scope="col" class="text-center">Is BestSeller</th>
+                        <th scope="col" style="padding-bottom: 20px;" class="text-center">Actions</th>
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
+                      <tr *ngFor="let getMedicineDetails of getMedicineDetailsList | paginate:{itemsPerPage:5,currentPage:pageNo}; index as i;">
+                        <th scope="row">{{i+1}}</th>
+                        <td>{{getMedicineDetails.medicineName}}</td>
+                        <td>{{getMedicineDetails.manufactureName}}</td>
+                        <td>{{getMedicineDetails.categoryName}}</td>
+                        <td>{{getMedicineDetails.medicinePrice}}/-</td>
+                        <td>{{getMedicineDetails.medicineQuantity}}</td>
+                        <td class="text-center" *ngIf="getMedicineDetails.inStock===true"><i class="fa fa-check" style="color: green; font-size: 20px;"></i></td>
+                        <td class="text-center" *ngIf="getMedicineDetails.inStock===false"><i class="fa fa-close" style="color: red; font-size: 20px;"></i></td>
+                        <td class="text-center" *ngIf="getMedicineDetails.bestSeller===true"><i class="fa fa-check" style="color: green; font-size: 20px;"></i></td>
+                        <td class="text-center" *ngIf="getMedicineDetails.bestSeller===false"><i class="fa fa-close" style="color: red; font-size: 20px;"></i></td>
                         <td class="text-center">
-                           <a [routerLink]="['../update-medicine/']"><i class="fa fa-edit"></i></a>
-                            <i class="fa fa-trash-o" (click)="confirmBox()"></i>
+                           <a [routerLink]="['../update-medicine/',getMedicineDetails.medicineId]"><i class="fa fa-edit"></i></a>
+                            <i class="fa fa-trash-o" (click)="confirmBox(getMedicineDetails.medicineId)"></i>
                         </td>
                       </tr>
                     </tbody>
+                   
                   </table>
+                  <div class="row float-end">
+                    <pagination-controls (pageChange)="pageNo=$event"></pagination-controls>
+                  </div>
+                  
             </div>
         </div>
       </div>  

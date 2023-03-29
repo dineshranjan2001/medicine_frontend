@@ -25,6 +25,7 @@ import { ShopProfileContentsComponent } from './components/shop-profile-contents
 import { ShopUpdateProfileContentsComponent } from './components/shop-update-profile-contents/shop-update-profile-contents.component';
 import { NgxHideOnScrollModule } from 'ngx-hide-on-scroll';
 import { HttpClientModule } from '@angular/common/http';
+import { DashboardFooterComponent } from './components/dashboard-footer/dashboard-footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,6 +44,7 @@ import { HttpClientModule } from '@angular/common/http';
     ShopUpdateMedicinesContentsComponent,
     ShopProfileContentsComponent,
     ShopUpdateProfileContentsComponent,
+    DashboardFooterComponent,
   ],
   imports: [
     BrowserModule,

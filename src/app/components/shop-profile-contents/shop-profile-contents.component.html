@@ -13,11 +13,12 @@
                         <span class="shop-header">Shop Details</span>
                         <div class="card-body pt-4">
                             <div class="d-flex">
-                                <img src="../../../assets/images/background-pic.jpg" alt="" class="img-fluid">
+                                <img src={{shopProfile.fileName}} alt="" class="img-fluid">
                                 <div class="shop-contents">
-                                    <h4>JayJagannath Medicine Store</h4>
-                                    <h6>BadaHata, Kendrapara, Odisha, 754211</h6>
-                                    <h6><i class="fa fa-phone"></i> 7077967371</h6>
+                                    <h4>{{shopProfile.shopName}}</h4>
+                                    <h6>{{shopProfile.shopAddress}}</h6>
+                                    <h6><i class="fa fa-envelope"></i> {{shopProfile.shopEmail}}</h6>
+                                    <h6><i class="fa fa-phone"></i> {{shopProfile.shopPhone}}</h6>
                                 </div>
                             </div>
                         </div>
@@ -29,19 +30,15 @@
                         <div class="card-body pt-4">
                             <div class="d-flex mb-2 font-set">
                                 <div><i class="fa fa-user"></i> Owner Name &nbsp;:&nbsp;</div> <span></span>
-                                <div>Dinesh Ranjan Biswal</div>
+                                <div>{{shopProfile.ownerFirstName}} {{shopProfile.ownerLastName}}</div>
                             </div>
                             <div class="d-flex mb-2 font-set">
                                 <div><i class="fa fa-id-card" aria-hidden="true"></i> Username&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;</div> <span></span>
-                                <div>jayjagannath_owner</div>
+                                <div>{{shopProfile.shopUsername}}</div>
                             </div>
                             <div class="d-flex mb-2 font-set">
                                 <div><i class="fa fa-phone"></i> Owner phone :&nbsp;</div>
-                                <div>7077967371</div>
-                            </div>
-                            <div class="d-flex mb-2 font-set">
-                                <div><i class="fa fa-envelope"></i> Owner Email &nbsp;:&nbsp;</div>
-                                <div>dineshranjanbiswal70@gmail.com</div>
+                                <div>{{shopProfile.ownerPhone}}</div>
                             </div>
                         </div>
                     </div>

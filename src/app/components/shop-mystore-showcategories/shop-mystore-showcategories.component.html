@@ -1,34 +1,50 @@
 <div class="row pt-4">
-    <div class="card">
-        <div class="card-header">
-            <img src="../../../assets/images/Ayurvedic-logo.png" alt="" class="img-fluid image">
-            <span>Ayurvedic Medicine</span>
-            <span class="float-end close-btn">X</span>
-        </div>
-        <div class="card-body">
-            <div class="col-md-4 pb-2">
-                <input type="text" class="form-control" placeholder="Search Here...">
-            </div>
-            <table class="table table-bordered table-responsive-md">
-                <thead>
-                  <tr>
-                    <th scope="col">Sl.No</th>
-                    <th>Medicine Photo</th>
-                    <th>Medicine Name</th>
-                    <th>Manufacture Name</th>
-                    <th>Medicine Price</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row" class="text-center"></th>
-                    <td class="text-center"><img src="../../../assets/images/Allopathic-logo.png" alt="" class=""></td>
-                    <td>Medicine Name</td>
-                    <td>Manufacture Name</td>
-                    <td>Medicine Price</td>
-                  </tr>
-                </tbody>
-              </table>
-        </div>
+  <div class="card">
+    <div class="card-header">
+      <img *ngIf="categoryName==='Ayurvedic'" src="../../../assets/images/Ayurvedic-logo.png" alt=""
+        class="img-fluid image">
+      <img *ngIf="categoryName==='Homeopathic '" src="../../../assets/images/Homeopathy-logo.png" alt=""
+        class="img-fluid image">
+      <img *ngIf="categoryName==='Allopathic'" src="../../../assets/images/Allopathic-logo.png" alt=""
+        class="img-fluid image">
+      <span>{{categoryName}} Medicine</span>
+      <span class="float-end close-btn" (click)="close()">X</span>
     </div>
+    <div class="card-body medicineDetailsByIdDiv">
+      
+        <div class="col-md-4 pb-2">
+          <input type="text" class="form-control" placeholder="Search Here..." name="searchName"
+            [(ngModel)]="searchName">
+        </div>
+        <div class="scroll">
+        <table class="table table-bordered table-responsive-md">
+          <thead>
+            <tr>
+              <th scope="col">Sl.No</th>
+              <th>Medicine Photo</th>
+              <th>Medicine Name</th>
+              <th>Manufacture Name</th>
+              <th>Medicine Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let medicineDetails of medicineDetailsList | filter:searchName ; index as i;">
+              <th scope="row" class="text-center pt-4">{{i+1}}</th>
+              <td class="text-center">
+                <img *ngIf="medicineDetails.fileName!==null" src={{medicineDetails.fileName}} alt="" class="">
+                <img *ngIf="medicineDetails.fileName===null" src="../../../assets/images/no-photos.png" alt="" class="">
+              </td>
+              <td class="pt-4">{{medicineDetails.medicineName}}</td>
+              <td class="pt-4">{{medicineDetails.manufactureName}}</td>
+              <td class="pt-4">{{medicineDetails.medicinePrice}}/-</td>
+            </tr>
+          </tbody>
+        </table>
+         </div>
+        <!-- <div class="row float-end">
+                <pagination-controls (pageChange)="pageNumber=$event"></pagination-controls>
+              </div> -->
+      </div>
+    </div>
+ 
 </div>

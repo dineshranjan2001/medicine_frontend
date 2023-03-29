@@ -19,7 +19,7 @@ export class AddMedicineService {
     return this.http.get<AddMedicine[]>(`${baseUrl}/shop-dashboard/add-medicine`);
   }
 
-  public saveMedicineDetails(addMedicine:any){
-    return this.http.post(`${baseUrl}/shop-dashboard/add-medicine/save`,addMedicine,{observe:'response'});
+  public saveMedicineDetails(addMedicine:any):Observable<any>{
+    return this.http.post(`${baseUrl}/shop-dashboard/add-medicine/`,addMedicine,{observe:'response'});
   }
 }

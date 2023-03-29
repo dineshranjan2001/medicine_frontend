@@ -37,12 +37,23 @@ span{
     border-radius: 50%;
 }
 table thead tr{
-    color: #199fa3;
+    color: white;
 }
 table tbody tr{
     color: #536e1d;
 }
 table tbody img{
-    height: 45px;
-    width: 45px;
+    height: 55px;
+    width: 55px;
+}
+
+ div.scroll{
+    margin-top:4px !important;
+                padding:4px;
+                width: auto;
+                height: 250px;
+                overflow-x: hidden;
+                overflow-y: auto;
+                text-align:justify;
+ 
 }

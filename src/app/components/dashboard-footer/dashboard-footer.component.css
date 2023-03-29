@@ -1,0 +1,16 @@
+.dashboard-footer{
+    background-color: white;
+    box-shadow: -1px -3px 7px rgb(204, 201, 201);
+}
+.dashboard-footer .copyright-section{
+	font-size: 15px;
+	color: #037072;
+}
+.dashboard-footer a{
+	text-decoration: none;
+	color: #037072;
+	transition: 0.3s;
+}
+.dashboard-footer a:hover{
+	color: #08a1a3;
+}
