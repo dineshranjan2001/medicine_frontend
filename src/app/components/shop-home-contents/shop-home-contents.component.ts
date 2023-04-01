@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { AddMedicine } from 'src/app/Modelclass/add-medicine';
+import { MedicineQuantity } from 'src/app/Modelclass/medicine-quantity';
+import { ShopService } from 'src/app/services/shop.service';
 
 @Component({
   selector: 'app-shop-home-contents',
@@ -7,6 +10,19 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrls: ['./shop-home-contents.component.css']
 })
 export class ShopHomeContentsComponent implements OnInit {
+
+  medicineQuantity:MedicineQuantity=new MedicineQuantity();
+  medicineList!:AddMedicine[];
+ 
+  constructor(private shopService:ShopService) { }
+
+  ngOnInit(): void {
+    this.shopService.getHomeInformation().subscribe((response)=>{
+      console.log(response);
+      this.medicineQuantity=response.medicineQuantityDetails;
+      this.medicineList=response.medicineDetailsList;
+    });
+  }
 
   customOptions:OwlOptions={
     loop:true,
@@ -37,9 +53,4 @@ export class ShopHomeContentsComponent implements OnInit {
     },
     nav:true,
   }
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

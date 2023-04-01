@@ -13,10 +13,4 @@ export class SignInComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {}
-
-  onclick(){
-    this.signInVisible=!this.signInVisible;
-    this.forgotEmailVisible=!this.forgotEmailVisible;
-  }
-
 }

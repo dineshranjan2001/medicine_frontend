@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { ShopAddMedicinesContentsComponent } from './components/shop-add-medicines-contents/shop-add-medicines-contents.component';
 import { ShopHomeContentsComponent } from './components/shop-home-contents/shop-home-contents.component';
 import { ShopMystoreContentsComponent } from './components/shop-mystore-contents/shop-mystore-contents.component';
@@ -31,8 +32,17 @@ const routes: Routes = [
   {
     path:"shop-sign-up",
     component:ShopSignUpComponent,
-    title:"Shop Register Here",
     pathMatch:"full"
+  },
+  {
+    path:'customer/forgot-email',
+    component:ForgotPasswordComponent,
+    pathMatch:'full'
+  },
+  {
+    path:'shop/forgot-email',
+    component:ForgotPasswordComponent,
+    pathMatch:'full'
   },
   {
     path:'shop-dashboard',

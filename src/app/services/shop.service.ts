@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs/internal/Observable';
 import baseUrl from './helper';
 
 @Injectable({
@@ -17,5 +18,13 @@ export class ShopService {
   //add shop 
   public addNewShop(shop:any){
     return this.http.post(`${baseUrl}/shop-sign-up/`,shop,{responseType:'text'});
+  }
+
+  public getShopDetails():Observable<any>{
+    return this.http.get(`${baseUrl}/shop-dashboard/`);
+  }
+
+  public getHomeInformation():Observable<any>{
+    return this.http.get(`${baseUrl}/shop-dashboard/home`);
   }
 }

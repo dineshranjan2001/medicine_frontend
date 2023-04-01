@@ -11,7 +11,8 @@
               <i class="fa fa-bars"></i> Dashboard
             </span>
             <div class="">
-             <img src="../../../assets/images/background-pic.jpg" alt="" class="img-fluid profile-short-name">
+              <img *ngIf="fileName!=null" src={{fileName}} alt="" class="img-fluid profile-short-name">
+              <img *ngIf="fileName==null" src="../../../assets/images/no-photos.png" alt="" class="img-fluid profile-short-name" style="padding: 4px;">
             </div>
           </div>
         </nav>
@@ -19,7 +20,16 @@
       <section class="main-contents">
         <router-outlet></router-outlet>
       </section>
-      <app-dashboard-footer></app-dashboard-footer>
+      <section class="dashboard-footer mt-4">
+        <div class="container">
+          <div class="row text-center">
+            <div class="col-md-12 p-4 copyright-section">
+              <span>Copyright &#xa9; 2023 All rights reversed | </span><span>Design By <a href="#"
+                  target="_blank">Dinesh Ranjan Biswal</a></span>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   </div>
 </body>

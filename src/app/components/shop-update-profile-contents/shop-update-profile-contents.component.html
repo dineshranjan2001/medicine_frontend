@@ -1,68 +1,95 @@
 <div class="container px-5 pt-4">
     <section class="shop-add-medicine-section">
         <h5><i class="fa fa-hand-o-right"></i> Update Profile</h5>
-        <div class="row">
-            <div class="card my-3">
-                <div class="card-body">
-                    <div class="row my-3">
-                        <div class="col-md-9">
-                            <a [routerLink]="['../profile']" ><i class="fa fa-long-arrow-left back-btn"></i></a>
+        <form #shopUpdateForm="ngForm" (ngSubmit)="onSubmit(shopUpdateForm)">
+            <div class="row">
+                <div class="card my-3">
+                    <div class="card-body">
+                        <div class="row my-3">
+                            <div class="col-md-9">
+                                <a [routerLink]="['../profile']"><i class="fa fa-long-arrow-left back-btn"></i></a>
+                            </div>
+                            <div class="col-md-3 pb-3">
+                                <button class="btn btn-success float-end"><i class="fa fa-edit"></i> Update
+                                    Profile</button>
+                            </div>
                         </div>
-                        <div class="col-md-3 pb-3">
-                            <button class="btn btn-success float-end"><i class="fa fa-edit"></i> Update Profile</button>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-1"></div>
-                        <div class="col-md-4 text-center img-section">
-                            <img src="../../../assets/images/user-profile.png" alt="">
-                        </div>
-                        <div class="col-md-6">
-                            <div class="row shop-details">
-                                <div class="col-6">
+                        <div class="row">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-4 text-center img-section">
+                                <img src="../../../assets/images/user-profile.png" alt="">
+                            </div>
+                            <div class="col-md-6">
+                                <div class="row shop-details">
+                                    <div class="col-6">
+                                        <div class="mb-2">
+                                            <label for="">Shop Name</label>
+                                            <input type="text" [(ngModel)]="shop.shopName" name="shopName" id="shopName"
+                                                class="form-control" placeholder="Enter Shop Name Here...">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mb-2">
+                                            <label for="">Shop Phone</label>
+                                            <input type="text" [(ngModel)]="shop.shopPhone" name="shopPhone"
+                                                id="shopPhone" class="form-control"
+                                                placeholder="Enter Shop Phone Here...">
+                                        </div>
+                                    </div>
                                     <div class="mb-2">
-                                        <label for="">Shop Name</label>
-                                        <input type="text" name="" id="" class="form-control"
-                                            placeholder="Enter Shop Name Here...">
+                                        <label for="">Shop Email</label>
+                                        <input type="email" [(ngModel)]="shop.shopEmail" name="shopEmail" id="shopEmail"
+                                            class="form-control" placeholder="Enter Owner Email Here...">
+                                    </div>
+
+                                    <div class="mb-2">
+                                        <label for="">Shop Photo</label>
+                                        <input type="file" name="" id="shopPhoto" class="form-control"
+                                            placeholder="Enter Manufacture Name Here..."
+                                            (change)="onSelectedFile($event)">
+                                    </div>
+                                    <div class="mb-4">
+                                        <label for="">Shop Address</label>
+                                        <textarea [(ngModel)]="shop.shopAddress" name="shopAddress" id="shopAddress"
+                                            rows="3" class="form-control"
+                                            placeholder="Enter Manufacture Name Here..."></textarea>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="mb-2">
-                                        <label for="">Shop Phone</label>
-                                        <input type="text" name="" id="" class="form-control"
-                                            placeholder="Enter Shop Phone Here...">
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="mb-2">
+                                            <label for="">Owner First Name</label>
+                                            <input type="text" [(ngModel)]="shop.ownerFirstName" name="ownerFirstName"
+                                                id="ownerFirstName" class="form-control"
+                                                placeholder="Enter Owner First Name Here...">
+                                        </div>
                                     </div>
+                                    <div class="col-md-6">
+                                        <div class="mb-2">
+                                            <label for="">Owner Last Name</label>
+                                            <input type="text" [(ngModel)]="shop.ownerLastName" name="ownerLastName"
+                                                id="ownerLastName" class="form-control"
+                                                placeholder="Enter Owner Last Name Here...">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-2">
+                                    <label for="">Owner Phone</label>
+                                    <input type="text" [(ngModel)]="shop.ownerPhone" name="ownerPhone" id="ownerPhone"
+                                        class="form-control" placeholder="Enter Owner Phone Here...">
                                 </div>
                                 <div class="mb-4">
-                                    <label for="">Shop Photo</label>
-                                    <input type="file" name="" id="" class="form-control"
-                                        placeholder="Enter Manufacture Name Here...">
+                                    <label for="">Password</label>
+                                    <input type="password" [(ngModel)]="shop.shopPassword" name="shopPassword"
+                                        id="shopPassword" class="form-control" placeholder="Enter Password Here...">
                                 </div>
                             </div>
-                            <div class="mb-2">
-                                <label for="">Owner Name</label>
-                                <input type="text" name="" id="" class="form-control"
-                                    placeholder="Enter Owner Name Here...">
-                            </div>
-                            <div class="mb-2">
-                                <label for="">Owner Email</label>
-                                <input type="email" name="" id="" class="form-control" placeholder="Enter Owner Email Here...">
-                            </div>
-                            <div class="mb-2">
-                                <label for="">Owner Phone</label>
-                                <input type="text" name="" id="" class="form-control"
-                                    placeholder="Enter Owner Phone Here...">
-                            </div>
-                            <div class="mb-4">
-                                <label for="">Password</label>
-                                <input type="password" name="" id="" class="form-control"
-                                    placeholder="Enter Password Here...">
-                            </div>
+                            <div class="col-md-1"></div>
                         </div>
-                        <div class="col-md-1"></div>
                     </div>
                 </div>
             </div>
-        </div>
+        </form>
     </section>
 </div>

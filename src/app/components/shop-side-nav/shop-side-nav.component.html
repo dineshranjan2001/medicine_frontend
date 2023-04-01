@@ -5,8 +5,9 @@
     </div>
     <hr>
     <div class="shop-name-email-section">
-        <span>JayJagannath Medicine Store</span>
-        <h6><i class="fa fa-envelope" aria-hidden="true"></i> jayjagnnathmedicine@gmail.com</h6>
+        <span>{{shop.shopName}}</span>
+        <h6><i class="fa fa-envelope" aria-hidden="true"></i> {{shop.shopEmail}}</h6>
+        <h6><i class="fa fa-phone" aria-hidden="true"></i> {{shop.shopPhone}}</h6>
     </div>
     <hr>
     <div class="shop-menu-section">
@@ -16,8 +17,4 @@
         <a class="menu-items" [routerLinkActive]="'active'" [routerLink]="['profile']"><i class="fa fa-address-card"></i> Profile</a>
         <a class="menu-items" [routerLinkActive]="'active'" [routerLink]="['logout']"><i class="fa fa-power-off"></i> Logout</a>
     </div>
-    <!-- <hr> -->
-    <!-- <div class="shop-copyright-section">
-        <div>&#169; Copyright 2023</div> 
-    </div> -->
 </div>

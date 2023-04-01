@@ -7,8 +7,7 @@
                 <img src="../../../assets/images/m-login-pic.jpg" class="img-fluid" alt="">
             </div>
             <div class="col-md-5 pt-5 text-section">
-                <!-- for sign in -->
-                <div class="m-sign-in" *ngIf="signInVisible">
+                <div class="m-sign-in">
                     <h2 class="card-title pb-3">Sign In Here...</h2>
                     <form>
                         <div class="mb-3">
@@ -22,7 +21,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                                <span class="float-end forgot-btn" (click)="onclick()">forgot password?</span>
+                                <a [routerLink]="['../customer/forgot-email']" class="float-end forgot-btn">forgot password?</a>
                             </div>
                             <div class="col-md-8"></div>
                             <div class="col-md-4">
@@ -46,39 +45,6 @@
                         </div>
                     </form>
                 </div>
-                <!-- end sign in email -->
-
-                <!-- for forgot email -->
-                <div class="m-forgot-email" *ngIf="forgotEmailVisible">
-                    <h2 class="card-title pb-3">Set New Password Here...</h2>
-                    <form>
-                        <div class="mb-3">
-                            <label for="user-email" class="form-label signin-text">Email</label>
-                            <input type="email" class="form-control" id="user-email" placeholder="Enter Email Here...">
-                        </div>
-                        <div class="mb-3">
-                            <label for="user-new-password" class="form-label signin-text">New Password</label>
-                            <input type="password" class="form-control" id="user-new-password"
-                                placeholder="Enter New Password Here...">
-                        </div>
-                        <div class="mb-3">
-                            <label for="confirm-password" class="form-label signin-text">Confirm Password</label>
-                            <input type="password" class="form-control" id="confirm-password"
-                                placeholder="Enter Confirm Password Here...">
-                        </div>
-                        <div>
-                            <div class="col-md-5"></div>
-                            <div class="col-md-7 ms-auto">
-                                <button type="cancel" class="btn btn-danger ms-1" (click)="onclick()"><i
-                                        class="fa fa-arrow-left"></i> Back</button>
-                                <button type="submit" class="btn btn-outline-success float-end">Save Password <i
-                                        class="fa fa-send-o"></i></button>
-                            </div>
-                        </div>
-
-                    </form>
-                </div>
-                <!--end for forgot email -->
             </div>
             <div class="col-md-1"></div>
         </div>

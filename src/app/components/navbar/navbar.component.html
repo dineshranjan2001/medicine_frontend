@@ -27,13 +27,13 @@
               Sign In
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown" #values>
-              <li><a class="dropdown-item" [routerLink]="['/sign-in']">Sign In</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/sign-in']" [routerLinkActive]="['active']" #signIn="routerLinkActive">Sign In</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" [routerLink]="['/sign-up']">Sign Up</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/sign-up']" [routerLinkActive]="['active']" #signUp="routerLinkActive">Sign Up</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" [routerLink]="['/shop-sign-in']">Shop Sign In</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/shop-sign-in']" [routerLinkActive]="['active']" #shopSignIn="routerLinkActive">Shop Sign In</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" [routerLink]="['/shop-sign-up']">Shop Sign Up</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/shop-sign-up']" [routerLinkActive]="['active']" #shopSignUp="routerLinkActive">Shop Sign Up</a></li>
             </ul>
           </li>
         </ul>

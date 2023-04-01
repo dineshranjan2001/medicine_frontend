@@ -32,6 +32,7 @@ h2{
 	box-shadow:9px 0px 15px #888889ad;
 }
 .forgot-btn{
+	text-decoration: none;
     margin-top: -12px;
     padding-bottom: 10px;
     cursor: pointer;

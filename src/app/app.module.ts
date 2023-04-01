@@ -25,7 +25,8 @@ import { ShopProfileContentsComponent } from './components/shop-profile-contents
 import { ShopUpdateProfileContentsComponent } from './components/shop-update-profile-contents/shop-update-profile-contents.component';
 import { NgxHideOnScrollModule } from 'ngx-hide-on-scroll';
 import { HttpClientModule } from '@angular/common/http';
-import { DashboardFooterComponent } from './components/dashboard-footer/dashboard-footer.component';
+import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import { FooterComponent } from './components/footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +45,8 @@ import { DashboardFooterComponent } from './components/dashboard-footer/dashboar
     ShopUpdateMedicinesContentsComponent,
     ShopProfileContentsComponent,
     ShopUpdateProfileContentsComponent,
-    DashboardFooterComponent,
+    ForgotPasswordComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

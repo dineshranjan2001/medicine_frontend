@@ -8,3 +8,7 @@
 .m-navbar .navbar-nav .nav-link.active{
     color: #5f8d04 !important;
 }
+.active{
+    color: #5f8d04 !important;
+    background-color: transparent;
+}
