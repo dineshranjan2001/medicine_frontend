@@ -12,6 +12,15 @@ import { ShopSignInComponent } from './pages/shop-sign-in/shop-sign-in.component
 import { ShopSignUpComponent } from './pages/shop-sign-up/shop-sign-up.component';
 import { SignInComponent } from './pages/sign-in/sign-in.component';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
+import { UserDashboardComponent } from './pages/user-dashboard/user-dashboard.component';
+import { UserHomeContentsComponent } from './components/user-home-contents/user-home-contents.component';
+import { UserWishlistContentsComponent } from './components/user-wishlist-contents/user-wishlist-contents.component';
+import { UserOrdersHistoryContentsComponent } from './components/user-orders-history-contents/user-orders-history-contents.component';
+import { UserProfileContentsComponent } from './components/user-profile-contents/user-profile-contents.component';
+import { UserUpdateMyprofileContentsComponent } from './components/user-update-myprofile-contents/user-update-myprofile-contents.component';
+import { UserIndivisualProductDetailsContentsComponent } from './components/user-indivisual-product-details-contents/user-indivisual-product-details-contents.component';
+import { UserCategorywiseproductContentsComponent } from './components/user-categorywiseproduct-contents/user-categorywiseproduct-contents.component';
+import { UserMycartContentsComponent } from './components/user-mycart-contents/user-mycart-contents.component';
 
 const routes: Routes = [
   {
@@ -79,6 +88,49 @@ const routes: Routes = [
       }
     ]
     
+  },
+  {
+    path:'user-dashboard',
+    component:UserDashboardComponent,
+    children:[
+      {
+        path:'',
+        redirectTo:'home',
+        pathMatch:'full'
+      },
+      {
+        path:'home',
+        component:UserHomeContentsComponent
+      },
+      {
+        path:'my-wishlist',
+        component:UserWishlistContentsComponent
+      },
+      {
+        path:'my-carts',
+        component:UserMycartContentsComponent
+      },
+      {
+        path:'my-orders',
+        component:UserOrdersHistoryContentsComponent
+      },
+      {
+        path:'my-profile',
+        component:UserProfileContentsComponent
+      },
+      {
+        path:'update-my-profile',
+        component:UserUpdateMyprofileContentsComponent
+      },
+      {
+        path:'product-details',
+        component:UserIndivisualProductDetailsContentsComponent
+      },
+      {
+        path:'product-category',
+        component:UserCategorywiseproductContentsComponent
+      }
+    ]
   },
 ];
 

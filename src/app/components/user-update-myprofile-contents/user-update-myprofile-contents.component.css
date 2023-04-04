@@ -1,0 +1,21 @@
+h5{
+    color: #0b7fd5;
+    font-size: 23px;
+}
+.card{
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border: 1px solid rgba(255, 255, 255, 0.997);
+}
+.form-control,.form-select{
+    border: 1px solid #0b7fd5;
+}
+.img-section{
+    padding-top: 5rem;
+}
+.label-header{
+    color: #f05498;
+}

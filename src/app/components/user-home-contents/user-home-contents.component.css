@@ -1,0 +1,69 @@
+h5{
+    color: #0b7fd5;
+    font-size: 23px;
+}
+.user-categories-section .card{
+    background-color:#0b7fd5;
+    border: none;
+    transition: 0.3s;
+}
+.user-categories-section .card:hover{
+    background-color:#2594e9;
+    border: none;
+}
+.img-decore{
+    background-color: #f5deb3;
+    border-radius: 50%;
+    padding: 6px;
+    width: 70px;
+    height: 70px;
+    margin-right: 15px;
+}
+.user-categories-section span{
+    color: white;
+    font-size: 18px;
+    position: relative;
+    cursor: pointer;
+    padding-bottom: 3px;
+}
+.user-categories-section span:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fa5162;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+.user-categories-section span:hover:after{
+    transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.heart{
+    color: #989898;
+    margin-top: 5px;
+    margin-left: 190px;
+    font-size: 30px;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    padding: 0px;
+    text-align: center;
+  }
+  .heart:hover{
+    color: red;
+    background-color:transparent;
+    cursor: pointer;
+  }
+  .user-bestseller-section .card{
+    border: none;
+    background-color: rgb(241, 241, 241);
+  }
+  .user-allproduct-section .card{
+    border: none;
+    background-color: rgb(241, 241, 241);
+  }

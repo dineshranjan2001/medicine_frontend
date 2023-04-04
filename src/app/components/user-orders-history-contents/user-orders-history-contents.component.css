@@ -1,0 +1,47 @@
+h5{
+    color: #0b7fd5;
+    font-size: 20px;
+}
+.no-order-card-section{
+    border-bottom-right-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+    border-top-left-radius: 0px !important;
+    border: none;
+    margin-top: 1px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); 
+    padding: 50px;
+}
+.order-header{
+    border-top-right-radius: 8px !important;
+    border-top-left-radius: 8px !important;
+    border-bottom-right-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    border: none;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); 
+    margin-bottom: 3px;
+}
+.medicine-order-card-section{
+    border-bottom-right-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+    border-top-left-radius: 0px !important;
+    /* border: 1px solid #0b7fd5; */
+    margin-bottom: 3px;
+}
+.medicine-order-card-section:hover{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); 
+}
+.medicine-photo-section{
+    height: 100% !important;
+    width: 100% !important;
+}
+.medicine-name-section{
+    color:#0b7fd5;
+}
+.category-name-section span{
+    background-color: green;
+    color: white;
+    padding: 5px 15px 6px 15px;
+    border-radius: 25px;
+}

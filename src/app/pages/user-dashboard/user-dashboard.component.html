@@ -1,0 +1,41 @@
+<body>
+  <div class="d-flex" id="wrapper">
+    <div class="side-nav">
+      <app-user-side-nav></app-user-side-nav>
+    </div>
+    <div class="user-dashboard-contents-section">
+      <section class="navbar-section">
+        <nav class="navbar">
+          <div class="container-fluid">
+            <span class="bar-icon-section">
+              <i class="fa fa-bars"></i> Dashboard
+            </span>
+            <div class="">
+              <i class="fa fa-heart icons"></i>
+              <span class="nos-wishlists">10</span>
+              <i class="fa fa-shopping-cart icons"></i>
+              <span class="nos-carts">10</span>
+              <!-- <img *ngIf="fileName!=null" src={{fileName}} alt="" class="img-fluid profile-short-name">
+                <img *ngIf="fileName==null" src="../../../assets/images/no-photos.png" alt="" class="img-fluid profile-short-name" style="padding: 4px;"> -->
+                <img src="../../../assets/images/user.png" alt="" class="img-fluid profile-short-name" style="padding: 4px;">
+            </div>
+          </div>
+        </nav>
+      </section>
+      <main>
+        <section class="main-contents">
+          <router-outlet></router-outlet>
+        </section>
+        <section class="user-dashboard-footer mt-4">
+          <div class="row">
+            <div class="col-md-12 p-4 copyright-section">
+              <span>Copyright &#xa9; 2023 All rights reversed | </span><span>Design By <a href="#"
+                  target="_blank">Dinesh
+                  Ranjan Biswal</a></span>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>

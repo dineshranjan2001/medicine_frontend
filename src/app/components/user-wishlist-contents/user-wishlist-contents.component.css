@@ -1,0 +1,64 @@
+h5{
+    color: #0b7fd5;
+    font-size: 20px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.no-wishlist-card-section{
+    border-bottom-right-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+    border-top-left-radius: 0px !important;
+    /* border: 1px solid #0b7fd5; */
+    border: none;
+    margin-top: 1px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); 
+    padding: 50px;
+}
+
+.wishlist-header{
+    border-top-right-radius: 8px !important;
+    border-top-left-radius: 8px !important;
+    border-bottom-right-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    /* border: 1px solid #0b7fd5; */
+    border: none;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); 
+}
+.medicine-wishlist-card-section{
+    border-bottom-right-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+    border-top-left-radius: 0px !important;
+    /* border: 1px solid #0b7fd5; */
+    border: none;
+    margin-top: 1px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.medicine-photo-section{
+    height: 100% !important;
+    width: 100% !important;
+}
+.not-available-section{
+    position: absolute !important;
+    margin-top: -50px !important;
+    text-align: center;
+    padding-left: 30px !important;
+}
+.medicine-name-section{
+    color:#0b7fd5;
+}
+.category-name-section span{
+    background-color: green;
+    color: white;
+    padding: 5px 15px 6px 15px;
+    border-radius: 25px;
+}
+.card:hover .medicine-name-section{
+    color: rgb(0, 81, 255);
+}
+.delete-section:hover{
+    cursor: pointer;
+}

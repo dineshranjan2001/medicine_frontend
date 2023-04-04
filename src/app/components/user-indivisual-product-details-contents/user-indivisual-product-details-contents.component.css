@@ -1,0 +1,62 @@
+h5{
+    color: #0b7fd5;
+    font-size: 20px;
+}
+.product-details .card{
+    border-bottom-right-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+    border-top-left-radius: 0px !important;
+    border: none;
+    margin-top: 1px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); 
+}
+.medicine-image-section img{
+    width: 320px;
+    height:320px;
+    border-radius: 6px;
+}
+.medicine-name-price-section .medicine-name-section{
+    color:#0b7fd5;
+    font-size: 18px;
+}
+.medicine-name-price-section .category-name-section span{
+    background-color: green;
+    color: white;
+    padding: 5px 15px 6px 15px;
+    border-radius: 25px;
+    font-size: 18px;
+}
+.medicine-about-section h6{
+    color: #08548f;
+    padding-top: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 2px;
+    border-bottom: 3px solid #f05498;
+    width: 20%;
+}
+.medicine-about-section div{
+    color: #0b7fd5;
+    text-align: justify;
+}
+hr{
+    color: #f05498;
+}
+.heart{
+    color: #989898;
+    margin-top: 5px;
+    margin-left: 270px;
+    font-size: 30px;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    padding: 0px;
+    text-align: center;
+  }
+  .heart:hover{
+    color: red;
+    background-color:transparent;
+    cursor: pointer;
+  }

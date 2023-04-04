@@ -1,0 +1,59 @@
+h5{
+    color: #0b7fd5;
+    font-size: 20px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.medicine-photo-section{
+    height: 150px !important;
+    width: 100% !important;
+}
+.medicine-name-section{
+    color:#0b7fd5;
+}
+.category-name-section span{
+    background-color: green;
+    color: white;
+    padding: 5px 15px 6px 15px;
+    border-radius: 25px;
+}
+.card{
+    cursor: pointer;
+    border-bottom-right-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+    border-top-left-radius: 0px !important;
+    /* border: 1px solid #0b7fd5; */
+    border: none;
+    margin-top: 1px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); 
+}
+.medicine-name-section:hover{
+    color: rgb(0, 81, 255);
+}
+
+.not-available-section{
+    position: absolute !important;
+    margin-top: -50px !important;
+    text-align: center;
+    padding-left: 30px !important;
+}
+.heart{
+    color: #989898;
+    margin-top: 4px;
+    margin-left: 110px;
+    font-size: 30px;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    padding: 0px;
+    text-align: center;
+  }
+  .heart:hover{
+    color: red;
+    background-color:transparent;
+    cursor: pointer;
+  }

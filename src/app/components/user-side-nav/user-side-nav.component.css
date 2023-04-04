@@ -1,0 +1,69 @@
+.user-sidenav{
+    background-color: #0e77c8;
+    height: 100%;
+    width: 320px
+    
+}
+.user-dashboard-logo-section{
+    text-align: center;
+    padding: 30px 0px 20px 0px;
+    color: white;
+}
+.user-dashboard-logo-section img{
+    height: 80px;
+    width: 80px;
+    background-color:wheat;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px 10px #3277ab;
+    margin-bottom:20px ;
+}
+hr{
+    color: rgb(255, 255, 255);
+    height: 3px;
+    border-radius: 3px;
+}
+.user-name-email-section{
+    text-align: center;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+.user-name-email-section span{
+    background-color: white;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 22px;
+    color: #0b7fd5;
+    box-shadow: 0px 0px 5px 3px #316ea0;
+    font-weight: bold;
+}
+.user-name-email-section h6{
+    margin-top: 15px;
+    font-size: 13px;
+}
+.user-menu-section{
+    margin-left:20px ;
+    color: white;
+    font-size: 18px;
+}
+.user-menu-section .menu-items{
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.user-menu-section .menu-items:hover{
+    color: #0b7fd5;
+    background-color: white;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+.active{
+    background-color: white;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    color: #0b7fd5 !important;
+}

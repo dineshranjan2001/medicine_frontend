@@ -1,0 +1,74 @@
+<div class="container px-5 pt-4">
+    <h5><i class="fa fa-hand-o-right"></i> Update Profile</h5>
+    <section class="user-update-myprofile-section">
+        <form>
+            <div class="row">
+                <div class="card my-3">
+                    <div class="card-body">
+                        <div class="row my-3">
+                            <div class="col-md-9">
+                                <a [routerLink]="['../my-profile']"><i class="fa fa-long-arrow-left back-btn"></i></a>
+                            </div>
+                            <div class="col-md-3 pb-3">
+                                <button class="btn btn-success float-end"><i class="fa fa-edit"></i> Update
+                                    Profile</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-4 text-center img-section">
+                                <img src="../../../assets/images/user-profile.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-md-6">
+                                <div class="row shop-details">
+                                    <div class="col-6">
+                                        <div class="mb-2">
+                                            <label for="" class="label-header">First Name</label>
+                                            <input type="text" name="customerFirstName" id="customerFirstName"
+                                                class="form-control" placeholder="Enter First Name Here...">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mb-2">
+                                            <label for=""  class="label-header">Last Name</label>
+                                            <input type="text"  name="customerLastName"
+                                                id="customerLastName" class="form-control"
+                                                placeholder="Enter Last Name Here...">
+                                        </div>
+                                    </div>
+                                    <div class="mb-2">
+                                        <label for=""  class="label-header">Phone</label>
+                                        <input type="text"  name="customerPhone" id="customerPhone"
+                                            class="form-control" placeholder="Enter Phone Number Here...">
+                                    </div>
+                                    <div class="mb-2"  class="label-header">
+                                        <label for="">Email Address</label>
+                                        <input type="email"  name="customerEmail" id="customerEmail"
+                                            class="form-control" placeholder="Enter Email Address Here...">
+                                    </div>
+
+                                    <div class="mb-2"  class="label-header">
+                                        <label for="">Photo</label>
+                                        <input type="file" name="" id="customerPhoto" class="form-control">
+                                    </div>
+                                    <div class="mb-2" class="label-header">
+                                        <label for="">Password</label>
+                                        <input type="password" name="customerPassword"
+                                            id="customerPassword" class="form-control" placeholder="Enter Password Here...">
+                                    </div>
+                                    <div class="mb-4"  class="label-header">
+                                        <label for="">Address</label>
+                                        <textarea name="customerAddress" id="customerAddress"
+                                            rows="3" class="form-control mb-4"
+                                            placeholder="Enter Address Here..."></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-1"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+</div>

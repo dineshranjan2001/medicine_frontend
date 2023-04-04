@@ -1,0 +1,56 @@
+h5{
+    color: #0b7fd5;
+    font-size: 23px;
+}
+.outer-circle{
+    height: 160px !important;
+    width: 160px !important;
+    border-radius: 50%;
+    background-color: #0b7fd5;
+    position: relative;
+    margin-top: -5rem;
+    margin-left: 17rem;
+    
+}
+.inner-circle img{
+    height: 145px;
+    width: 145px;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: 7px;
+    margin-left: 7px;
+}
+.edit-btn{
+    position: absolute;
+    font-size: 20px;
+    margin-left: 24.5rem;
+    margin-top: -4.3rem;
+    background-color: #eae6e6;
+    padding: 5px 6px 6px 13px;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    color: #054b82;
+    cursor: pointer;
+}
+.edit-btn:hover{
+    background-color: #dfdcdc;
+    color: #1a5480;
+}
+.my-profile-section .card{
+    background-color: #0b7fd5 !important;
+    border: none;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.order-wishlist-profile-section{
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+}
+.order-wishlist-profile-section span{
+    color: #0b7fd5;
+    font-size: 18px;
+}

@@ -27,6 +27,15 @@ import { NgxHideOnScrollModule } from 'ngx-hide-on-scroll';
 import { HttpClientModule } from '@angular/common/http';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { UserSideNavComponent } from './components/user-side-nav/user-side-nav.component';
+import { UserHomeContentsComponent } from './components/user-home-contents/user-home-contents.component';
+import { UserWishlistContentsComponent } from './components/user-wishlist-contents/user-wishlist-contents.component';
+import { UserMycartContentsComponent } from './components/user-mycart-contents/user-mycart-contents.component';
+import { UserProfileContentsComponent } from './components/user-profile-contents/user-profile-contents.component';
+import { UserCategorywiseproductContentsComponent } from './components/user-categorywiseproduct-contents/user-categorywiseproduct-contents.component';
+import { UserOrdersHistoryContentsComponent } from './components/user-orders-history-contents/user-orders-history-contents.component';
+import { UserUpdateMyprofileContentsComponent } from './components/user-update-myprofile-contents/user-update-myprofile-contents.component';
+import { UserIndivisualProductDetailsContentsComponent } from './components/user-indivisual-product-details-contents/user-indivisual-product-details-contents.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,6 +56,15 @@ import { FooterComponent } from './components/footer/footer.component';
     ShopUpdateProfileContentsComponent,
     ForgotPasswordComponent,
     FooterComponent,
+    UserSideNavComponent,
+    UserHomeContentsComponent,
+    UserWishlistContentsComponent,
+    UserMycartContentsComponent,
+    UserProfileContentsComponent,
+    UserCategorywiseproductContentsComponent,
+    UserOrdersHistoryContentsComponent,
+    UserUpdateMyprofileContentsComponent,
+    UserIndivisualProductDetailsContentsComponent,
   ],
   imports: [
     BrowserModule,

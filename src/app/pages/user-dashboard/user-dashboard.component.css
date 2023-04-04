@@ -1,0 +1,85 @@
+.user-dashboard-contents-section{
+    width: 100%;
+    background-image:url("../../../assets/images/background-logo-img.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;   
+    overflow: hidden;
+}
+.bar-icon-section{
+    font-size: 25px;
+    color: #0b7fd5;
+}
+.bar-icon-section .fa-bars{
+    font-size: 25px;
+    cursor: pointer;
+    color: #0b7fd5;
+}
+.navbar{
+    background-color: white;
+    box-shadow: 1px 2px 7px rgb(204, 201, 201);
+}
+.profile-short-name{
+    border: 3px solid #0b7fd5;
+    border-radius: 50%;
+    padding: -11px 0px 0px 7px;
+    height: 55px;
+    width: 55px;
+    color: white;
+    box-shadow: 1px 2px 4px rgb(176, 173, 173);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.icons{
+    font-size: 28px;
+    margin-right: 4rem;
+    margin-top: 12px;
+    color: #0b7fd5;
+}
+.nos-wishlists{
+    position: absolute;
+    background-color: red;
+    margin-top: 25px;
+    margin-left: -76px;
+    font-weight: 700;
+    font-size: 10px;
+    padding: 2px;
+    border-radius: 50%;
+    color:white;
+}
+.nos-carts{
+    position: absolute;
+    background-color: red;
+    margin-top: 25px;
+    margin-left: -72px;
+    font-weight: 700;
+    font-size: 10px;
+    padding: 2px;
+    border-radius: 50%;
+    color:white;
+}
+#wrapper.toggled .side-nav {
+    margin-left: 0;
+  }
+
+main{
+    min-height:calc(100vh- 70px- 70px) ;
+}
+
+.user-dashboard-footer{
+    background-color: white;
+    box-shadow: -1px -3px 7px rgb(204, 201, 201);
+    bottom: 0;
+}
+.user-dashboard-footer .copyright-section{
+	font-size: 15px;
+	color: #0b7fd5;
+}
+.user-dashboard-footer a{
+	text-decoration: none;
+	color: #0b7fd5;
+	transition: 0.3s;
+}
+.user-dashboard-footer a:hover{
+	color: #0b7fd5;
+}

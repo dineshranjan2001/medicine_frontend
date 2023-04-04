@@ -42,4 +42,13 @@ body{
 .back-btn:hover{
     background-color: rgb(200, 191, 191);
     border-radius: 50%;
+    transition: 0.3s;
+    opacity: 1;
+}
+.btn-sky{
+    background-color: #0b7fd5 !important;
+    color: white !important;
+}
+.btn-sky:hover{
+    opacity: 0.9;
 }
