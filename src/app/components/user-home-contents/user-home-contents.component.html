@@ -1,102 +1,106 @@
 <div class="container px-5 pt-4">
+    <!-- medicine categories section -->
     <section class="user-categories-section">
         <h5><i class="fa fa-hand-o-right"></i> Categories</h5>
         <div class="row py-2">
-            <div class="col-md-4">
-                <div class="card text-center">
-                    <div class="card-body">
-                        <img src="../../../assets/images/Allopathic-logo.png" alt="" class="img-fluid img-decore">
-                        <span>Allopathic Medicine</span>
+            <div class="col-md-4" *ngFor="let getMedicineCategoryDetails of getMedicineCategoryDetailsList">
+                <a [routerLink]="['../product-category',getMedicineCategoryDetails.categoryId]">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <img *ngIf="getMedicineCategoryDetails.categoryName==='Ayurvedic'"
+                                src="../../../assets/images/Ayurvedic-logo.png" alt="" class="img-fluid img-decore">
+                            <img *ngIf="getMedicineCategoryDetails.categoryName==='Homeopathic '"
+                                src="../../../assets/images/Homeopathy-logo.png" alt="" class="img-fluid img-decore">
+                            <img *ngIf="getMedicineCategoryDetails.categoryName==='Allopathic'"
+                                src="../../../assets/images/Allopathic-logo.png" alt="" class="img-fluid img-decore">
+                            <span>{{getMedicineCategoryDetails.categoryName}} Medicine</span>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </section>
+    <!--end medicine categories section -->
 
+    <!-- best seller section -->
     <section class="user-bestseller-section py-4">
-        <h5><i class="fa fa-hand-o-right pb-3"></i> Best Seller Medicines</h5>   
+        <h5><i class="fa fa-hand-o-right pb-3"></i> Best Seller Medicines</h5>
         <owl-carousel-o [options]="customOptions">
-            <ng-template carouselSlide>
-                <div class="card me-2" style="width: 15rem;">
-                    <span id="heart" class="heart"><i class="fa fa-heart"></i></span>
+            <ng-template carouselSlide *ngFor="let getBestSellerMedicine of getBestSellerMedicineList">
+                <div class="card m-2" style="width: 15rem;">
+                    <span id="heart" class="heart"><i class="fa fa-heart" (click)="addToWishlist(getBestSellerMedicine.medicineId)"></i></span>
                     <div class="hover-rotate">
-                        <img src="../../../assets/images/background-pic.jpg" class="img-fluid">
+                        <img src={{getBestSellerMedicine.fileName}} class="img-fluid">
+                        <div *ngIf="getBestSellerMedicine.inStock==false" class="text-danger not-available-section">
+                            Currently <br> unavailable</div>
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">Medicine1</h5>
-                        <p class="card-text">Allopathic <span class="float-end">90/-</span></p>
+                        <a href="">
+                            <h6 class="medicine-name">{{getBestSellerMedicine.medicineName}}</h6>
+                            <strong class="manufacture-name">{{getBestSellerMedicine.manufactureName}}</strong>
+                            <p class="pt-2" style="color: #064d83;">{{getBestSellerMedicine.categoryName}} <span
+                                    class="float-end"><span>&#8377;</span>{{getBestSellerMedicine.medicinePrice}}</span>
+                            </p>
+                        </a>
                         <div>
-                            <button class="btn btn-sky float-end"><i class="fa fa-shopping-cart"></i> Add To Cart</button>
+                            <button class="btn btn-sky float-end"><i class="fa fa-shopping-cart"></i> Add To
+                                Cart</button>
+                            <button *ngIf="getBestSellerMedicine.inStock==false" disabled
+                                class="btn btn-sky float-end"><i class="fa fa-shopping-cart"></i> Add To
+                                Cart</button>
                         </div>
                     </div>
                 </div>
             </ng-template>
         </owl-carousel-o>
     </section>
+    <!--end best seller section -->
 
-    <section class="user-allproduct-section py-4">
-        <h5><i class="fa fa-hand-o-right pb-3"></i>All Products</h5>   
+    <!-- all product details -->
+    <section class="user-allproduct-section py-2">
+        <h5><i class="fa fa-hand-o-right pb-3"></i>All Products</h5>
         <div class="row">
-            <div class="col-md-3">
-                <div class="card me-2" style="width: 15rem;">
-                    <span id="heart" class="heart"><i class="fa fa-heart"></i></span>
-                    <div class="hover-rotate">
-                        <img src="../../../assets/images/background-pic.jpg" class="img-fluid">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Medicine1</h5>
-                        <p class="card-text">Allopathic <span class="float-end">90/-</span></p>
-                        <div>
-                            <button class="btn btn-sky float-end"><i class="fa fa-shopping-cart"></i> Add To Cart</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card me-2" style="width: 15rem;">
-                    <span id="heart" class="heart"><i class="fa fa-heart"></i></span>
-                    <div class="hover-rotate">
-                        <img src="../../../assets/images/background-pic.jpg" class="img-fluid">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Medicine1</h5>
-                        <p class="card-text">Allopathic <span class="float-end">90/-</span></p>
-                        <div>
-                            <button class="btn btn-sky float-end"><i class="fa fa-shopping-cart"></i> Add To Cart</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card me-2" style="width: 15rem;">
-                    <span id="heart" class="heart"><i class="fa fa-heart"></i></span>
-                    <div class="hover-rotate">
-                        <img src="../../../assets/images/background-pic.jpg" class="img-fluid">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Medicine1</h5>
-                        <p class="card-text">Allopathic <span class="float-end">90/-</span></p>
-                        <div>
-                            <button class="btn btn-sky float-end"><i class="fa fa-shopping-cart"></i> Add To Cart</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card me-2" style="width: 15rem;">
-                    <span id="heart" class="heart"><i class="fa fa-heart"></i></span>
-                    <div class="hover-rotate">
-                        <img src="../../../assets/images/background-pic.jpg" class="img-fluid">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Medicine1</h5>
-                        <p class="card-text">Allopathic <span class="float-end">90/-</span></p>
-                        <div>
-                            <button class="btn btn-sky float-end"><i class="fa fa-shopping-cart"></i> Add To Cart</button>
-                        </div>
-                    </div>
+            <div class="col-md-8"></div>
+            <div class="col-md-4 pb-2">
+                <div class="me-3">
+                    <input type="text" class="form-control float-end" placeholder="Search Here..." name="searchName"
+                        [(ngModel)]="searchName">
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-3 mb-3"
+                *ngFor="let getAllMedicine of getAllMedicineList | filter:searchName | paginate:{itemsPerPage:8,currentPage:pageNo}">
+
+                <div class="card me-2" style="width: 15rem;">
+                    <span id="heart" class="heart"><i class="fa fa-heart" (click)="addToWishlist(getAllMedicine.medicineId)"></i></span>
+                    <div class="hover-rotate">
+                        <img src={{getAllMedicine.fileName}} class="img-fluid">
+                        <div *ngIf="getAllMedicine.inStock==false" class="text-danger not-available-section">
+                            Currently
+                            <br> unavailable
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <a href="">
+                            <h6 class="medicine-name">{{getAllMedicine.medicineName}}</h6>
+                            <strong class="manufacture-name">{{getAllMedicine.manufactureName}}</strong>
+                            <p class="pt-2" style="color: #064d83;">{{getAllMedicine.categoryName}} <span
+                                    class="float-end"><span>&#8377;</span>{{getAllMedicine.medicinePrice}}</span></p>
+                        </a>
+                        <div>
+                            <button class="btn btn-sky float-end"><i class="fa fa-shopping-cart"></i> Add To
+                                Cart</button>
+                            <button *ngIf="getAllMedicine.inStock==false" disabled class="btn btn-sky float-end"><i
+                                    class="fa fa-shopping-cart"></i> Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <pagination-controls (pageChange)="pageNo=$event"></pagination-controls>
+            </div>
+        </div>
     </section>
+    <!--end all product details -->
 </div>

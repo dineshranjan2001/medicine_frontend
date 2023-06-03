@@ -21,117 +21,144 @@ import { UserUpdateMyprofileContentsComponent } from './components/user-update-m
 import { UserIndivisualProductDetailsContentsComponent } from './components/user-indivisual-product-details-contents/user-indivisual-product-details-contents.component';
 import { UserCategorywiseproductContentsComponent } from './components/user-categorywiseproduct-contents/user-categorywiseproduct-contents.component';
 import { UserMycartContentsComponent } from './components/user-mycart-contents/user-mycart-contents.component';
+import { HomeComponent } from './pages/home/home.component';
+import { HomeContentsComponent } from './components/home-contents/home-contents.component';
+import { CustomerGuard } from './guard/customer.guard';
+import { ErrorContentsComponent } from './components/error-contents/error-contents.component';
 
 const routes: Routes = [
   {
-    path: "sign-in",
-    component: SignInComponent,
-    pathMatch: "full"
-  },
-  {
-    path:"sign-up",
-    component:SignUpComponent,
-    pathMatch:"full"
-  },
-  {
-    path:"shop-sign-in",
-    component:ShopSignInComponent,
-    pathMatch:"full"
-  },
-  {
-    path:"shop-sign-up",
-    component:ShopSignUpComponent,
-    pathMatch:"full"
-  },
-  {
-    path:'customer/forgot-email',
-    component:ForgotPasswordComponent,
-    pathMatch:'full'
-  },
-  {
-    path:'shop/forgot-email',
-    component:ForgotPasswordComponent,
-    pathMatch:'full'
-  },
-  {
-    path:'shop-dashboard',
-    component:ShopDashboardComponent,
-    children:[
+    path: '',
+    component: HomeComponent,
+    children: [
       {
-        path:'',
-        redirectTo:'home',
-        pathMatch:'full'
+        path: 'mediorder/home',
+        component: HomeContentsComponent,
+        pathMatch: 'full'
       },
       {
-        path:'home',
-        component:ShopHomeContentsComponent,  
+        path: 'mediorder/sign-in',
+        component: SignInComponent,
+        pathMatch: 'full'
       },
       {
-        path:'mystore',
-        component:ShopMystoreContentsComponent
+        path: 'mediorder/sign-up',
+        component: SignUpComponent,
+        pathMatch: 'full'
       },
       {
-        path:'add-medicine',
-        component:ShopAddMedicinesContentsComponent
+        path: 'mediorder/shop-sign-in',
+        component: ShopSignInComponent,
+        pathMatch: 'full'
       },
       {
-        path:'update-medicine/:medicineId',
-        component:ShopUpdateMedicinesContentsComponent
+        path: 'mediorder/shop-sign-up',
+        component: ShopSignUpComponent,
+        pathMatch: 'full'
       },
       {
-        path:'profile',
-        component:ShopProfileContentsComponent
+        path: 'mediorder/customer/forgot-email',
+        component: ForgotPasswordComponent,
+        pathMatch: 'full'
       },
       {
-        path:'update-profile',
-        component:ShopUpdateProfileContentsComponent
-      }
-    ]
-    
-  },
-  {
-    path:'user-dashboard',
-    component:UserDashboardComponent,
-    children:[
-      {
-        path:'',
-        redirectTo:'home',
-        pathMatch:'full'
+        path: 'mediorder/shop/forgot-email',
+        component: ForgotPasswordComponent,
+        pathMatch: 'full'
       },
-      {
-        path:'home',
-        component:UserHomeContentsComponent
-      },
-      {
-        path:'my-wishlist',
-        component:UserWishlistContentsComponent
-      },
-      {
-        path:'my-carts',
-        component:UserMycartContentsComponent
-      },
-      {
-        path:'my-orders',
-        component:UserOrdersHistoryContentsComponent
-      },
-      {
-        path:'my-profile',
-        component:UserProfileContentsComponent
-      },
-      {
-        path:'update-my-profile',
-        component:UserUpdateMyprofileContentsComponent
-      },
-      {
-        path:'product-details',
-        component:UserIndivisualProductDetailsContentsComponent
-      },
-      {
-        path:'product-category',
-        component:UserCategorywiseproductContentsComponent
-      }
+
     ]
   },
+
+  {
+    path: '',
+    component: ShopDashboardComponent,
+    children: [
+      {
+        path: 'shop-dashboard/home',
+        component: ShopHomeContentsComponent,
+         pathMatch: 'full'
+      },
+      {
+        path: 'shop-dashboard/mystore',
+        component: ShopMystoreContentsComponent,
+         pathMatch: 'full'
+      },
+      {
+        path: 'shop-dashboard/add-medicine',
+        component: ShopAddMedicinesContentsComponent,
+         pathMatch: 'full'
+      },
+      {
+        path: 'shop-dashboard/update-medicine/:medicineId',
+        component: ShopUpdateMedicinesContentsComponent,
+         pathMatch: 'full'
+      },
+      {
+        path: 'shop-dashboard/profile',
+        component: ShopProfileContentsComponent,
+         pathMatch: 'full'
+      },
+      {
+        path: 'shop-dashboard/update-profile',
+        component: ShopUpdateProfileContentsComponent,
+         pathMatch: 'full'
+      }
+    ]
+
+  },
+  {
+    path: '',
+    component: UserDashboardComponent,
+    canActivate: [CustomerGuard],
+    children: [
+      {
+        path: 'user-dashboard/home',
+        component: UserHomeContentsComponent,
+         pathMatch: 'full'
+      },
+      {
+        path: 'user-dashboard/my-wishlist',
+        component: UserWishlistContentsComponent,
+         pathMatch: 'full'
+      },
+      {
+        path: 'user-dashboard/my-carts',
+        component: UserMycartContentsComponent,
+         pathMatch: 'full'
+      },
+      {
+        path: 'user-dashboard/my-orders',
+        component: UserOrdersHistoryContentsComponent,
+         pathMatch: 'full'
+      },
+      {
+        path: 'user-dashboard/my-profile',
+        component: UserProfileContentsComponent,
+         pathMatch: 'full'
+      },
+      {
+        path: 'user-dashboard/update-my-profile',
+        component: UserUpdateMyprofileContentsComponent,
+         pathMatch: 'full'
+      },
+      {
+        path: 'user-dashboard/product-details/:medicineId',
+        component: UserIndivisualProductDetailsContentsComponent,
+         pathMatch: 'full'
+      },
+      {
+        path: 'user-dashboard/product-category/:categoryId',
+        component: UserCategorywiseproductContentsComponent,
+         pathMatch: 'full'
+      }
+    ]
+  },
+  {
+    path: "error-page",
+    component: ErrorContentsComponent,
+    pathMatch: 'full'
+  }
 ];
 
 @NgModule({

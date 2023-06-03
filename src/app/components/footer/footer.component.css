@@ -1,18 +1,55 @@
-.footer{
-    background-color:#013f40;
-    box-shadow: -1px -3px 7px rgb(#013f40);
+.footer .m-logo{
+    height: 62px !important;   
 }
-.footer .copyright-section{
-	font-size: 15px;
-	/* color: #037072; */
+.footer .quick-link div{
+	font-size: 17px;
+	padding-inline: 5px;
+	padding-bottom: 5px;
+	cursor: pointer;
+}
+.footer .quick-link div:hover{
 	color: white;
 }
-.footer a{
-	text-decoration: none;
-	/* color: #037072; */
-	color: white;
-	transition: 0.3s;
+.footer .mapouter {
+	position: relative;
+	text-align: right;
+	height: 100%;
+	width: 100%;
+  }
+.footer .gmap_canvas {
+	overflow: hidden;
+	background: none !important;
+	height: 100%;
+	width: 100%;
+  }
+  .footer .mail-support{
+	padding-top: 10px;
+	padding-left: 10px;
+  }
+  .footer .phone-support{
+	padding-top: 20px;
+	padding-left: 10px;
+  }
+  .footer .follow-us-header{
+	padding-top:20px ;
+	padding-left: 10px;
+	font-size: 17px;
 }
-.footer a:hover{
-	color: #08a1a3;
+.footer .social-media-link i{
+	background: #34343f;
+   	margin: 10px;
+	font-size: 20px;
+	padding: 15px 0px 0px 0px;
+	text-align: center;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	transition: 0.5s;
+}
+.footer .social-media-link i:hover{
+	background: #fff;
+    color: #5099e5;
+}
+.footer .copy-right{
+	padding-top: 5rem;
 }

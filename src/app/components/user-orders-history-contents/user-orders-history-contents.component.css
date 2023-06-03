@@ -33,15 +33,26 @@ h5{
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); 
 }
 .medicine-photo-section{
-    height: 100% !important;
+    height: 140px !important;
     width: 100% !important;
 }
-.medicine-name-section{
-    color:#0b7fd5;
-}
-.category-name-section span{
+.medicine-name{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100ch;
+    color: #0b7fd5 !important;
+    margin-bottom: 10px;
+  }
+.manufacture-name{
     background-color: green;
     color: white;
     padding: 5px 15px 6px 15px;
     border-radius: 25px;
+}
+.category-name{
+    color: #063d67;
+}
+.other{
+    color: #063d67;
 }

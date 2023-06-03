@@ -1,6 +1,6 @@
 <div class="container px-5 pt-4">
     <section class="my-orders-section">
-        <div class="row">
+        <div class="row" *ngIf="orderDetailsList?.length===0">
             <div class="col-md-12">
                 <div class="card no-order-card-section">
                     <div class="card-body text-center">
@@ -12,6 +12,8 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="row" *ngIf="orderDetailsList?.length!==0">
             <div class="col-md-12">
                 <div class="card order-header">
                     <div class="card-body">
@@ -19,25 +21,24 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12" *ngFor="let orderDetails of orderDetailsList">
                 <div class="card medicine-order-card-section">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-2">
-                                <img src="../../../assets/images/background-pic.jpg" alt=""
+                                <img src={{orderDetails.fileName}} alt=""
                                     class="img-fluid medicine-photo-section">
                             </div>
                             <div class="col-md-9">
-                                <div class="medicine-name-section">Botulinum Toxins: OnabotulinumtoxinA,
-                                    AbobotulinumtoxinA, RimabotulinumtoxinB,
-                                    IncobotulinumtoxinA</div>
-                                <div class="category-name-section my-2"><span>Allopathic</span></div>
+                                <div class="medicine-name">{{orderDetails.medicineName}}</div>
+                                <strong class="manufacture-name">{{orderDetails.manufactureName}}</strong>
+                                <div class="category-name my-2">{{orderDetails.medicineCategoryName}}</div>
+                                <div class="other">Quantity : {{orderDetails.orderQuantity}}</div>
+                                <div class="other">Order Date : {{orderDetails.date}}</div>
                             </div>
                             <div class="col-md-1">
                                 <div class="rupees-section float-end">
-                                    <div class="fw-bold"><span>&#8377;</span>70</div>
+                                    <div class="fw-bold"><span>&#8377;</span>{{orderDetails.totalPrice}}</div>
                                 </div>
                             </div>
                         </div>

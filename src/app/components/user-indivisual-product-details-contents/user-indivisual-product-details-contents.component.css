@@ -1,6 +1,6 @@
 h5{
     color: #0b7fd5;
-    font-size: 20px;
+    font-size: 23px;
 }
 .product-details .card{
     border-bottom-right-radius: 0px !important;
@@ -15,17 +15,6 @@ h5{
     width: 320px;
     height:320px;
     border-radius: 6px;
-}
-.medicine-name-price-section .medicine-name-section{
-    color:#0b7fd5;
-    font-size: 18px;
-}
-.medicine-name-price-section .category-name-section span{
-    background-color: green;
-    color: white;
-    padding: 5px 15px 6px 15px;
-    border-radius: 25px;
-    font-size: 18px;
 }
 .medicine-about-section h6{
     color: #08548f;
@@ -60,3 +49,47 @@ hr{
     background-color:transparent;
     cursor: pointer;
   }
+  .medicine-name{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100ch;
+    color:#0b7fd5;
+    font-size: 18px;
+  }
+  .manufacture-name{
+    background-color: green;
+    color: white;
+    padding: 5px 15px 6px 15px;
+    border-radius: 25px;
+}
+.category-name{
+    color: #0b7fd5 !important;
+}
+.not-available-section{
+    position: absolute !important;
+    margin-top: -48px !important;
+    text-align: center;
+    padding-left: 110px !important;
+    font-weight: bold;
+    background-color:white;
+    padding-right: 106px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.quantity-action .quantity{
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.action{
+    color: #0b7fd5;
+    background-color: rgb(212, 218, 223);
+    padding: 6px 26px 6px 26px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.action:hover{
+    color: #025ca0;
+    background-color: rgb(178, 182, 185);
+}

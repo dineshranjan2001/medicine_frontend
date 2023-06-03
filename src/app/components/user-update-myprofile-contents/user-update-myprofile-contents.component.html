@@ -1,7 +1,7 @@
 <div class="container px-5 pt-4">
     <h5><i class="fa fa-hand-o-right"></i> Update Profile</h5>
     <section class="user-update-myprofile-section">
-        <form>
+        <form #updateCustomerDetailsForm="ngForm" (ngSubmit)="onFormSubmit(updateCustomerDetailsForm)">
             <div class="row">
                 <div class="card my-3">
                     <div class="card-body">
@@ -24,41 +24,41 @@
                                     <div class="col-6">
                                         <div class="mb-2">
                                             <label for="" class="label-header">First Name</label>
-                                            <input type="text" name="customerFirstName" id="customerFirstName"
+                                            <input type="text" [(ngModel)]="customerDetails.customerFirstName" name="customerFirstName" id="customerFirstName"
                                                 class="form-control" placeholder="Enter First Name Here...">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="mb-2">
                                             <label for=""  class="label-header">Last Name</label>
-                                            <input type="text"  name="customerLastName"
+                                            <input type="text" [(ngModel)]="customerDetails.customerLastName" name="customerLastName"
                                                 id="customerLastName" class="form-control"
                                                 placeholder="Enter Last Name Here...">
                                         </div>
                                     </div>
                                     <div class="mb-2">
                                         <label for=""  class="label-header">Phone</label>
-                                        <input type="text"  name="customerPhone" id="customerPhone"
+                                        <input type="text" [(ngModel)]="customerDetails.customerPhone" name="customerPhone" id="customerPhone"
                                             class="form-control" placeholder="Enter Phone Number Here...">
                                     </div>
                                     <div class="mb-2"  class="label-header">
                                         <label for="">Email Address</label>
-                                        <input type="email"  name="customerEmail" id="customerEmail"
+                                        <input type="email" [(ngModel)]="customerDetails.customerEmail" name="customerEmail" id="customerEmail"
                                             class="form-control" placeholder="Enter Email Address Here...">
                                     </div>
 
                                     <div class="mb-2"  class="label-header">
                                         <label for="">Photo</label>
-                                        <input type="file" name="" id="customerPhoto" class="form-control">
+                                        <input type="file" name="" id="customerPhoto" class="form-control" (change)="onSelectedFile($event)">
                                     </div>
                                     <div class="mb-2" class="label-header">
                                         <label for="">Password</label>
-                                        <input type="password" name="customerPassword"
+                                        <input type="password" [(ngModel)]="customerDetails.customerPassword" name="customerPassword"
                                             id="customerPassword" class="form-control" placeholder="Enter Password Here...">
                                     </div>
                                     <div class="mb-4"  class="label-header">
                                         <label for="">Address</label>
-                                        <textarea name="customerAddress" id="customerAddress"
+                                        <textarea [(ngModel)]="customerDetails.customerAddress" name="customerAddress" id="customerAddress"
                                             rows="3" class="form-control mb-4"
                                             placeholder="Enter Address Here..."></textarea>
                                     </div>

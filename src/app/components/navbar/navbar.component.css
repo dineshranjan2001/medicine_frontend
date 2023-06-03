@@ -1,9 +1,16 @@
 .m-navbar .m-logo{
-    height: 32px !important;   
+    height: 52px !important;   
+}
+.m-navbar{
+    position: absolute;
+    width: 100%;
 }
 .m-navbar a{
     color: #35a5a7;
     font-weight:500;
+}
+.m-navbar .navbar-nav .nav-link{
+    font-size: 17px;
 }
 .m-navbar .navbar-nav .nav-link.active{
     color: #5f8d04 !important;
@@ -11,4 +18,16 @@
 .active{
     color: #5f8d04 !important;
     background-color: transparent;
+}
+.nav-start-btn{
+    background-color: #35a5a7;
+    padding: 6px 15px 7px 15px;
+    color: white;
+    border-radius: 30px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.nav-start-btn:hover{
+    background-color: #0e7779;
+    cursor: pointer;
 }

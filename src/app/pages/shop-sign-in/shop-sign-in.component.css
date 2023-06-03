@@ -2,7 +2,7 @@ body{
 	background-image: url("../../../assets/images/background-pic.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 100vh;
+	/* height: 100vh; */
 }
 h2{
     color: #35a5a7; 
@@ -14,7 +14,8 @@ h2{
     border: 1px solid #71d3d5 !important;
 }
 .sign-in-form{
-    padding-top: 5.3rem !important;
+    padding-top: 6rem !important;
+	padding-bottom: 4rem;
 }
 .image-section {
 	background-color: white; border-top-left-radius : 8px;

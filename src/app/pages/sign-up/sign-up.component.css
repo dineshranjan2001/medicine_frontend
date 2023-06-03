@@ -2,7 +2,7 @@ body{
 	background-image: url("../../../assets/images/background-pic.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 107vh;
+	/* height: 107vh; */
 }
 h2{
     color: #35a5a7; 
@@ -14,7 +14,7 @@ h2{
     border: 1px solid #71d3d5 !important;
 }
 .register-form{
-	padding-top: 1%;
+	padding-top: 6rem;
 	padding-left: 8%;
     padding-bottom: 20px;
 }

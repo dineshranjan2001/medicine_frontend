@@ -1,19 +1,16 @@
 h5{
     color: #0b7fd5;
-    font-size: 20px;
+    font-size: 23px;
 }
 a{
     text-decoration: none;
     color: black;
 }
 .medicine-photo-section{
-    height: 150px !important;
+    height: 180px !important;
     width: 100% !important;
 }
-.medicine-name-section{
-    color:#0b7fd5;
-}
-.category-name-section span{
+.manufacture-name{
     background-color: green;
     color: white;
     padding: 5px 15px 6px 15px;
@@ -30,15 +27,15 @@ a{
     margin-top: 1px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); 
 }
-.medicine-name-section:hover{
-    color: rgb(0, 81, 255);
-}
 
 .not-available-section{
     position: absolute !important;
-    margin-top: -50px !important;
+    margin-top: -48px !important;
     text-align: center;
     padding-left: 30px !important;
+    font-weight: bold;
+    background-color:white;
+    padding-right: 66px;
 }
 .heart{
     color: #989898;
@@ -56,4 +53,19 @@ a{
     color: red;
     background-color:transparent;
     cursor: pointer;
+  }
+  .medicine-name{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100ch;
+    color:#0b7fd5;
+    margin-bottom: 10px;
+  }
+.medicine-name:hover{
+    color: rgb(0, 81, 255);
+}
+.form-control{
+    border: 1px solid #0b7fd5;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); 
   }

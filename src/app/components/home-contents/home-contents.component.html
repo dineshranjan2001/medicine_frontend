@@ -1,0 +1,202 @@
+<section class="home-slider-section">
+    <div class="container-fluid">
+    <owl-carousel-o [options]="customOptions">
+        <ng-template carouselSlide>
+            <div class="row">
+                <div class="col-md-6 content-section">
+                    <h2>E-Commerce Medicine Order</h2>
+                    <p>Medicines are available in different categories.</p>
+                    <p>You can buy & also order those medicines quickly & easily.</p>
+                    <span class="get-started-btn">Get Started <i class="fa fa-long-arrow-right"></i></span>
+                </div>
+                <div class="col-md-6">
+                    <img src="../../../assets/images/online-pharmacy-store.jpg" alt="" class="img-fluid">
+                </div>
+            </div>
+        </ng-template>
+        <ng-template carouselSlide>
+            <div class="row">
+                <div class="col-md-6 content-section">
+                    <h2 style="color: #4bafcd !important;">Online Medicine Management System</h2>
+                    <p style="color: #11bf8e !important;">Now management is easy, quick & user-friendly.</p>
+                    <p style="font-size: 18px !important; color: #11bf8e !important;">You can add,update & manage
+                        your stock details quickly & easily.</p>
+                    <span class="get-started-btn" style="background-color: #4bafcd !important;"
+                        onmouseover="this.style.backgroundColor='#208586'"
+                        onmouseout="this.style.backgroundColor='#4bafcd'">Get Started <i
+                            class="fa fa-long-arrow-right"></i></span>
+                </div>
+                <div class="col-md-6">
+                    <img src="../../../assets/images/management-banner.png" alt="" class="img-fluid img-2">
+                </div>
+            </div>
+        </ng-template>
+    </owl-carousel-o>
+    </div>
+</section>
+
+<section class="our-services-section">
+    <div class="container">
+        <h3 class="text-center py-4">What we provides?</h3>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <img src="../../../assets/images/order-pic.jpg" alt="" class="img-fluid p-3">
+                        <h5>Buy Medicines</h5>
+                        <p>Buy all types medicine according to your need easily & quickly.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <img src="../../../assets/images/delivery-pic.jpg" alt="" class="img-fluid">
+                        <h5>Home Delivery</h5>
+                        <p>Free home delivery & fast delivery at any location.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <img src="../../../assets/images/management-pic.jpg" alt="" class="img-fluid p-3">
+                        <h5>Medicine Management Software</h5>
+                        <p>A User-friendly management system for the shop owner who manages all the tasks.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="about-us-section">
+    <div class="container">
+        <h3 class="text-center py-4">Who we are?</h3>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <owl-carousel-o [options]="aboutCustomOptions ">
+                            <ng-template carouselSlide>
+                                <img src="../../../assets/images/online-pharmacy-store.jpg" alt="" class="img-fluid">
+                            </ng-template>
+                            <ng-template carouselSlide>
+                                <img src="../../../assets/images/management-banner.png" alt="" class="img-fluid img-2">
+                            </ng-template>
+                        </owl-carousel-o>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-md-7">
+                <h3>MediOrder</h3>
+                <hr>
+                <div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="at-a-glance-section">
+    <div class="container">
+        <h3 class="text-center py-4">At a glance</h3>
+        <div class="row">
+            <div class="row">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-center pt-3" style="font-weight: bold;">
+                                    <img src="../../../assets/images/smiling-emoticon-square-face.png" alt="">
+                                    <span class="fs-5 ps-1">Happy Customers</span>
+                                </div>
+                                <hr>
+                                <div class="text-center counter">{{totalNosHappyCustomers}}+</div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-center pt-3" style="font-weight: bold;">
+                                <img src="../../../assets/images/smiling-emoticon-square-face.png" alt="">
+                                <span class="fs-5 ps-1">Happy Shop Owners</span>
+                            </div>
+                            <hr>
+                            <div class="text-center counter">{{totalNosHappyShopOwners}}+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="testimonial-section">
+    <div class="container">
+        <h3 class="text-center pt-5">Testimonials</h3>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body text-center py-3">
+                        <div class="testimonialbefore">“</div>
+                        <div class="testimonialafter">”</div>
+                        <owl-carousel-o [options]="testimonialOptions">
+                            <ng-template carouselSlide>
+                                <div>
+                                    <img src="../../../assets/images/customer1.png" alt="">
+                                </div>
+                                <h3>Gracy</h3>
+                                <div class="type">Customer</div>
+                                <div class="testimonial-text">I'm very happy with this application.The service of MediOrder is awesome & the orders are delivered in times. Thank You MediOrder.</div>
+                            </ng-template>
+                            <ng-template carouselSlide>
+                                <div>
+                                    <img src="../../../assets/images/customer2.png" alt="">
+                                </div>
+                                <h3>Philip</h3>
+                                <div class="type">Customer</div>
+                                <div class="testimonial-text">I'm very happy with this application.This application is very useful & simple to use & also service of MediOrder is awesome & the orders are delivered in times. Thank You MediOrder.</div>
+                            </ng-template>
+                            <ng-template carouselSlide>
+                                <div>
+                                    <img src="../../../assets/images/customer3.jpg" alt="">
+                                </div>
+                                <h3>Sreenivas Murthy</h3>
+                                <div class="type">Customer</div>
+                                <div class="testimonial-text">This application is very useful & simple to use & also service of MediOrder is awesome & the orders are delivered in times. Thank You MediOrder.</div>
+                            </ng-template>
+                            <ng-template carouselSlide>
+                                <div>
+                                    <img src="../../../assets/images/owner1.png" alt="">
+                                </div>
+                                <h3>Vijay</h3>
+                                <div class="type">Shop Owner</div>
+                                <div class="testimonial-text">This management system is very user-friendly & easy to use.I can easily manage all of the works.After this application my bussiness grow up. Thank You MediOrder.</div>
+                            </ng-template>
+                            <ng-template carouselSlide>
+                                <div>
+                                    <img src="../../../assets/images/owner2.png" alt="">
+                                </div>
+                                <h3>Praveen</h3>
+                                <div class="type">Shop Owner</div>
+                                <div class="testimonial-text">This management system is very user-friendly & easy to use.I can easily manage all of the works. Thank You MediOrder.</div>
+                            </ng-template>
+                            <ng-template carouselSlide>
+                                <div>
+                                    <img src="../../../assets/images/owner3.png" alt="">
+                                </div>
+                                <h3>Abhilash Gupta</h3>
+                                <div class="type">Shop Owner</div>
+                                <div class="testimonial-text">This management system is very user-friendly & easy to use.I can easily manage all of the works. Thank You MediOrder.</div>
+                            </ng-template>
+                        </owl-carousel-o>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+</section>
+<router-outlet></router-outlet>

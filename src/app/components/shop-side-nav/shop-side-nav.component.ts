@@ -12,7 +12,7 @@ export class ShopSideNavComponent implements OnInit {
 
   shop: Shop = new Shop();
 
-  constructor(private shopService: ShopService, private comService: CommunicationService,) {
+  constructor(private shopService: ShopService, private comService: CommunicationService) {
     this.comService.updateState.subscribe(r => {
       if (r == true) {
         this.shopService.getShopDetails().subscribe((response2) => {

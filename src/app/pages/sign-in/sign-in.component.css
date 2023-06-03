@@ -2,8 +2,9 @@ body{
 	background-image: url("../../../assets/images/background-pic.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 100vh;
+	/* height: 100vh; */
 }
+
 h2{
     color: #35a5a7; 
 }

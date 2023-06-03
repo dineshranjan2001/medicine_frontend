@@ -1,5 +1,6 @@
 export class AddMedicine {
-    medicineId!:string;;
+    medicineId!:string;
+    shopId!:string;
     medicineName!:string;
     medicinePhoto!:string;
     fileName!:any;
@@ -9,8 +10,11 @@ export class AddMedicine {
     categoryName!:string;
     medicinePrice!:number;
     medicineQuantity!:number;
-    soldoutQuantity!:number
-    inStock!:boolean
-    bestSeller!:boolean
+    soldoutQuantity!:number;
+    orderQuantity!:number;
+    totalPrice!:number;
+    grandTotalPrice!:number;
+    inStock!:boolean;
+    bestSeller!:boolean;
 
 }

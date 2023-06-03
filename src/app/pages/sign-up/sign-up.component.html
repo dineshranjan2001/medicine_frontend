@@ -1,7 +1,6 @@
 <body>
-	<app-navbar></app-navbar>
 	<div class="container">
-		<div class="row register-form">
+		<div class="row register-form pb-4">
 			<div class="col-md-5 image-section">
 				<img alt="" src="../../../assets/images/m-sign-up-pic.jpg" class="img-fluid">
 			</div>
@@ -38,6 +37,13 @@
 						<label for="password" class="form-label signin-text">Password </label> <input type="password"
 							class="form-control" id="password" [(ngModel)]="customer.customerPassword" name="customerPassword" placeholder="Enter Password Here"
 							required>
+					</div>
+					<div class="mb-3">
+						<div class="mb-2">
+							<label for="firstName" class="form-label signin-text">Address </label>
+							<textarea [(ngModel)]="customer.customerAddress"  name="customerAddress" class="form-control" [rows]="3" id="" cols="30" rows="10"
+								placeholder="Enter Shop Address Here" id="address" required></textarea>
+						</div>
 					</div>
 					<div class="row">
 						<div class="col-md-4 ms-auto">

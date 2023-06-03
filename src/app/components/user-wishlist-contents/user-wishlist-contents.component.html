@@ -1,6 +1,6 @@
 <div class="container px-5 pt-4">
     <section class="my-wishlist-section mt-3">
-        <div class="row">
+        <div class="row" *ngIf="wishlistProductDetailsList?.length==0">
             <div class="col-md-12">
                 <div class="card no-wishlist-card-section">
                     <div class="card-body text-center">
@@ -12,115 +12,46 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="row" *ngIf="wishlistProductDetailsList?.length!=0">
             <div class="col-md-12">
                 <div class="card wishlist-header">
                     <div class="card-body">
-                        <h5><i class="fa fa-hand-o-right"></i> My Wishlist(12)</h5>
+                        <h5><i class="fa fa-hand-o-right"></i> My Wishlist({{getTotalNumberWishlistProducts}})</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12" *ngFor="let wishlistProductDetails of wishlistProductDetailsList | paginate:{itemsPerPage:4,currentPage:pageNo}">
+                <div class="card medicine-wishlist-card-section">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <img src={{wishlistProductDetails.fileName}} alt=""
+                                    class="img-fluid medicine-photo-section">
+                                <div class="text-danger not-available-section" *ngIf="wishlistProductDetails.inStock==false">Currently <br> unavailable</div>
+                            </div>
+                            <div class="col-md-9">
+                                <a href="">
+                                    <div class="medicine-name">{{wishlistProductDetails.medicineName}}</div>
+                                    <strong class="manufacture-name">{{wishlistProductDetails.manufactureName}}</strong>
+                                    <div class="category-name my-2">{{wishlistProductDetails.categoryName}}</div>
+                                    <div class="mt-3 fw-bold fs-5"><span>&#8377;</span>{{wishlistProductDetails.medicinePrice}}</div>
+                                </a>
+                            </div>
+                            <div class="col-md-1">
+                                <div class="delete-section float-end">
+                                    <img src="../../../assets/images/trash.png" alt="" class="img-fluid" (click)="deleteProduct(wishlistProductDetails.medicineId)">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row mt-4">
             <div class="col-md-12">
-                <a href="">
-                    <div class="card medicine-wishlist-card-section">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-2">
-                                    <img src="../../../assets/images/background-pic.jpg" alt="" class="img-fluid medicine-photo-section">
-                                    <div class="text-danger not-available-section">Currently <br> unavailable</div>
-                                </div>
-                                <div class="col-md-9">
-                                    <div class="medicine-name-section">Botulinum Toxins: OnabotulinumtoxinA, AbobotulinumtoxinA, RimabotulinumtoxinB,
-                                        IncobotulinumtoxinA</div>
-                                    <div class="category-name-section my-2"><span>Allopathic</span></div>
-                                    <div class="mt-3 fw-bold fs-5"><span>&#8377;</span>70</div>
-                                </div>
-                                <div class="col-md-1">
-                                    <div class="delete-section float-end">
-                                        <img src="../../../assets/images/trash.png" alt="" class="img-fluid">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
+                <pagination-controls (pageChange)="pageNo=$event" class="float-end"></pagination-controls>
             </div>
-            <!-- <div class="col-md-12">
-                <a href="">
-                    <div class="card medicine-wishlist-card-section">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-2">
-                                    <img src="../../../assets/images/background-pic.jpg" alt="" class="img-fluid medicine-photo-section">
-                                    <div class="text-danger not-available-section">Currently <br> unavailable</div>
-                                </div>
-                                <div class="col-md-9">
-                                    <div class="medicine-name-section">Botulinum Toxins: OnabotulinumtoxinA, AbobotulinumtoxinA, RimabotulinumtoxinB,
-                                        IncobotulinumtoxinA</div>
-                                    <div class="category-name-section my-2"><span>Allopathic</span></div>
-                                    <div class="mt-3 fw-bold fs-5"><span>&#8377;</span>70</div>
-                                </div>
-                                <div class="col-md-1">
-                                    <div class="delete-section float-end">
-                                        <img src="../../../assets/images/trash.png" alt="" class="img-fluid">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div> -->
-            <!-- <div class="col-md-12">
-                <a href="">
-                    <div class="card medicine-wishlist-card-section">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-2">
-                                    <img src="../../../assets/images/background-pic.jpg" alt="" class="img-fluid medicine-photo-section">
-                                    <div class="text-danger not-available-section">Currently <br> unavailable</div>
-                                </div>
-                                <div class="col-md-9">
-                                    <div class="medicine-name-section">Botulinum Toxins: OnabotulinumtoxinA, AbobotulinumtoxinA, RimabotulinumtoxinB,
-                                        IncobotulinumtoxinA</div>
-                                    <div class="category-name-section my-2"><span>Allopathic</span></div>
-                                    <div class="mt-3 fw-bold fs-5"><span>&#8377;</span>70</div>
-                                </div>
-                                <div class="col-md-1">
-                                    <div class="delete-section float-end">
-                                        <img src="../../../assets/images/trash.png" alt="" class="img-fluid">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div> -->
-            <!-- <div class="col-md-12">
-                <a href="">
-                    <div class="card medicine-wishlist-card-section">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-2">
-                                    <img src="../../../assets/images/background-pic.jpg" alt="" class="img-fluid medicine-photo-section">
-                                    <div class="text-danger not-available-section">Currently <br> unavailable</div>
-                                </div>
-                                <div class="col-md-9">
-                                    <div class="medicine-name-section">Botulinum Toxins: OnabotulinumtoxinA, AbobotulinumtoxinA, RimabotulinumtoxinB,
-                                        IncobotulinumtoxinA</div>
-                                    <div class="category-name-section my-2"><span>Allopathic</span></div>
-                                    <div class="mt-3 fw-bold fs-5"><span>&#8377;</span>70</div>
-                                </div>
-                                <div class="col-md-1">
-                                    <div class="delete-section float-end">
-                                        <img src="../../../assets/images/trash.png" alt="" class="img-fluid">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div> -->
         </div>
     </section>
 </div>

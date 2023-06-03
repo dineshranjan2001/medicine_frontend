@@ -8,23 +8,25 @@
                     <div class="my-profile-image-section">
                         <div class="outer-circle">
                             <div class="inner-circle">
-                                <img src="../../../assets/images/background-pic.jpg" alt="" class="img-fluid">
+                                <img *ngIf="customerDetails.fileName==null" src="../../../assets/images/user.png" alt="" class="img-fluid">
+                                <img  src={{customerDetails.fileName}} alt="" class="img-fluid">
                             </div>
                         </div>
                         <div class="edit-btn"><i class="fa fa-pencil"></i></div>
                     </div>
                     <div class="card-body text-center">
-                        <div class="text-white fs-4 pb-1 fw-bold"><i class="fa fa-user"></i> Dinesh Ranjan Biswal</div>
-                        <div class="text-white fs-5 pb-1"><i class="fa fa-envelope"></i> dineshranjanbiswal79@gmail.com</div>
-                        <div class="text-white fs-5"><i class="fa fa-phone"></i> 7077957371</div>
+                        <div class="text-white fs-4 pb-1 fw-bold"><i class="fa fa-user"></i> {{customerDetails.customerFirstName}} {{customerDetails.customerLastName}}</div>
+                        <div class="text-white fs-5 pb-1"><i class="fa fa-envelope"></i> {{customerDetails.customerEmail}}</div>
+                        <div class="text-white fs-5"><i class="fa fa-phone"></i> {{customerDetails.customerPhone}}</div>
+                        <div class="text-white fs-5"><i class="fa fa-map-marker"></i> {{customerDetails.customerAddress}}</div>
                         <div class="d-flex justify-content-between order-wishlist-profile-section">
                             <div>
                                 <span><i class="fa fa-heart-o"></i> No Of Wishlists : </span>
-                                <span>20</span>
+                                <span>{{totalWishlistProuctNos}}</span>
                             </div>
                             <div>
                                 <span><i class='fa fa-truck'></i> No Of Orders : </span>
-                                <span>20</span>
+                                <span>{{totalOrderProductNos}}</span>
                             </div>
                         </div>
 

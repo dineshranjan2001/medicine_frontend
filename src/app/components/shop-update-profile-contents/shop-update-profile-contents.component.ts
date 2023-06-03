@@ -16,8 +16,8 @@ export class ShopUpdateProfileContentsComponent implements OnInit {
 
   constructor(
     private updateProfileService: UpdateShopProfileService,
-    private comService:CommunicationService,
-    private router:Router
+    private comService: CommunicationService,
+    private router: Router
   ) { }
 
   nameChecker: RegExp = /^[a-zA-Z ]{3,20}$/;
@@ -66,13 +66,6 @@ export class ShopUpdateProfileContentsComponent implements OnInit {
         showConfirmButton: false,
         timer: 1500
       });
-    } else if (!this.passwordChecker.test((<HTMLInputElement>document.getElementById('shopPassword')).value)) {
-      Swal.fire({
-        text: 'Password must be in 3-8 characters...',
-        color: 'red',
-        showConfirmButton: false,
-        timer: 1500
-      });
     } else if ((<HTMLInputElement>document.getElementById('shopAddress')).value == "" || (<HTMLInputElement>document.getElementById('shopAddress')).value == "null" || (<HTMLInputElement>document.getElementById('shopAddress')).value == "Null") {
       Swal.fire({
         text: 'Please Give Shop Address...',
@@ -107,12 +100,12 @@ export class ShopUpdateProfileContentsComponent implements OnInit {
         uploadData.append('updateImageFile', this.selectedFile, this.selectedFile.name);
         this.updateProfileService.uploadImage(uploadData).subscribe((response) => {
           console.log(response);
-          this.shop.shopPhoto=response;
-          if(response){
+          this.shop.shopPhoto = response;
+          if (response) {
             console.log(this.shop);
-            this.updateProfileService.saveUpdatedProfileDetails(this.shop).subscribe((response1)=>{
+            this.updateProfileService.saveUpdatedProfileDetails(this.shop).subscribe((response1) => {
               console.log(response1);
-              if(response1.success==true){
+              if (response1.success == true) {
                 Swal.fire({
                   icon: 'success',
                   title: response1.message,
@@ -124,14 +117,14 @@ export class ShopUpdateProfileContentsComponent implements OnInit {
                     this.router.navigate(['/shop-dashboard/profile']);
                   }
                 });
-              }else if(response1.success==false){
+              } else if (response1.success == false) {
                 Swal.fire({
                   icon: 'error',
                   title: response1.message,
                   confirmButtonColor: '#35a5a7',
                   confirmButtonText: 'Ok'
                 });
-              }else{
+              } else {
                 Swal.fire({
                   icon: 'error',
                   title: 'Something Went Wrong!!!',
@@ -142,11 +135,25 @@ export class ShopUpdateProfileContentsComponent implements OnInit {
             });
           }
         });
-      }else{
-        console.log(this.shop);
-            this.updateProfileService.saveUpdatedProfileDetails(this.shop).subscribe((response2)=>{
+      }
+      if ((<HTMLInputElement>document.getElementById('shopPassword')).value) {
+
+        let getPassword = (<HTMLInputElement>document.getElementById('shopPassword')).value;
+        if (getPassword != null) {
+          if (!this.passwordChecker.test(getPassword)) {
+            Swal.fire({
+              text: 'Password should be in 3-8 characters and it cannot contains any special characters...',
+              color: 'red',
+              showConfirmButton: false,
+              timer: 1500
+            })
+          }else {
+            console.log("enter into password else block and save it");
+            this.shop.shopPassword = getPassword;
+            this.updateProfileService.saveUpdatedProfileDetails(this.shop).subscribe((response2) => {
               console.log(response2);
-              if(response2.success==true){
+              console.log(response2.success == true);
+              if (response2.success == true) {
                 Swal.fire({
                   icon: 'success',
                   title: response2.message,
@@ -154,18 +161,17 @@ export class ShopUpdateProfileContentsComponent implements OnInit {
                   confirmButtonText: 'Ok'
                 }).then((result) => {
                   if (result.isConfirmed) {
-                    this.comService.emitChange();
                     this.router.navigate(['/shop-dashboard/profile']);
                   }
                 });
-              }else if(response2.success==false){
+              } else if (response2.success == false) {
                 Swal.fire({
                   icon: 'error',
                   title: response2.message,
                   confirmButtonColor: '#35a5a7',
                   confirmButtonText: 'Ok'
                 });
-              }else{
+              } else {
                 Swal.fire({
                   icon: 'error',
                   title: 'Something Went Wrong!!!',
@@ -174,9 +180,51 @@ export class ShopUpdateProfileContentsComponent implements OnInit {
                 });
               }
             });
-      }
-     
-    }
-  }
+          }
+        } else{
+          Swal.fire({
+            text: 'Password should be in 3-8 characters and it cannot contains any special characters...',
+            color: 'red',
+            showConfirmButton: false,
+            timer: 1500
+          })
+        }
+      } else {
+        console.log(this.shop);
+        this.updateProfileService.saveUpdatedProfileDetails(this.shop).subscribe((response3) => {
+          console.log(response3);
+          if (response3.success == true) {
+            Swal.fire({
+              icon: 'success',
+              title: response3.message,
+              confirmButtonColor: '#35a5a7',
+              confirmButtonText: 'Ok'
+            }).then((result) => {
+              if (result.isConfirmed) {
+                this.comService.emitChange();
+                this.router.navigate(['/shop-dashboard/profile']);
+              }
+            });
+          } else if (response3.success == false) {
+            Swal.fire({
+              icon: 'error',
+              title: response3.message,
+              confirmButtonColor: '#35a5a7',
+              confirmButtonText: 'Ok'
+            });
+          } else {
+            Swal.fire({
+              icon: 'error',
+              title: 'Something Went Wrong!!!',
+              confirmButtonColor: '#35a5a7',
+              confirmButtonText: 'Ok'
+            });
+          }
+        });
 
+      }
+    }
+
+  }
 }
+

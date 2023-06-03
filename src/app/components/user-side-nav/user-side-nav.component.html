@@ -5,9 +5,9 @@
     </div>
     <hr>
     <div class="user-name-email-section">
-        <span>Dinesh Ranjan Biswal</span>
-        <h6><i class="fa fa-envelope" aria-hidden="true"></i> dineshranjanbiswal70@gmail.com</h6>
-        <h6><i class="fa fa-phone" aria-hidden="true"></i> 7077067371</h6>
+        <span>{{customerProfile.customerFirstName}} {{customerProfile.customerLastName}}</span>
+        <h6><i class="fa fa-envelope" aria-hidden="true"></i> {{customerProfile.customerEmail}}</h6>
+        <h6><i class="fa fa-phone" aria-hidden="true"></i> {{customerProfile.customerPhone}}</h6>
     </div>
     <hr>
     <div class="user-menu-section">
@@ -16,6 +16,6 @@
         <a class="menu-items" [routerLinkActive]="''" [routerLink]="['']"><i class="fa fa-shopping-cart"></i> My Carts</a>
         <a class="menu-items" [routerLinkActive]="''" [routerLink]="['']"><i class='fa fa-truck'></i> My Orders</a>
         <a class="menu-items" [routerLinkActive]="''" [routerLink]="['']"><i class="fa fa-address-card"></i> My Profile</a>
-        <a class="menu-items" [routerLinkActive]="''" [routerLink]="['']"><i class="fa fa-power-off"></i> Logout</a>
+        <a class="menu-items" [routerLinkActive]="''" (click)="customerLogout()"><i class="fa fa-power-off"></i> Logout</a>
     </div>
 </div>

@@ -12,12 +12,13 @@
             </span>
             <div class="">
               <i class="fa fa-heart icons"></i>
-              <span class="nos-wishlists">10</span>
+              <span class="nos-wishlists" *ngIf="totalWishlistProuctNos!==0">{{totalWishlistProuctNos}}</span>
               <i class="fa fa-shopping-cart icons"></i>
-              <span class="nos-carts">10</span>
+              <span class="nos-carts" *ngIf="totalOrderProductNos!==0">{{totalOrderProductNos}}</span>
               <!-- <img *ngIf="fileName!=null" src={{fileName}} alt="" class="img-fluid profile-short-name">
                 <img *ngIf="fileName==null" src="../../../assets/images/no-photos.png" alt="" class="img-fluid profile-short-name" style="padding: 4px;"> -->
-                <img src="../../../assets/images/user.png" alt="" class="img-fluid profile-short-name" style="padding: 4px;">
+                <img *ngIf="profilePic!==null" src={{profilePic}} alt="" class="img-fluid profile-short-name" style="padding: 4px;">
+                <img *ngIf="profilePic===null" src="../../../assets/images/user.png" alt="" class="img-fluid profile-short-name" style="padding: 4px;">
             </div>
           </div>
         </nav>

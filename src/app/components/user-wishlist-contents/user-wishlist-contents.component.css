@@ -38,17 +38,34 @@ a{
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 .medicine-photo-section{
-    height: 100% !important;
+    height: 140px !important;
     width: 100% !important;
+}
+.medicine-name{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100ch;
+    color: #0b7fd5 !important;
+    margin-bottom: 10px;
+  }
+.manufacture-name{
+    background-color: green;
+    color: white;
+    padding: 5px 15px 6px 15px;
+    border-radius: 25px;
+}
+.category-name{
+    color: #063d67;
 }
 .not-available-section{
     position: absolute !important;
-    margin-top: -50px !important;
+    margin-top: -48px !important;
     text-align: center;
     padding-left: 30px !important;
-}
-.medicine-name-section{
-    color:#0b7fd5;
+    font-weight: bold;
+    background-color:white;
+    padding-right: 25px;
 }
 .category-name-section span{
     background-color: green;

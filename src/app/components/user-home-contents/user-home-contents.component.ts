@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { AddMedicine } from 'src/app/Modelclass/add-medicine';
+import { CustomerService } from 'src/app/services/customer.service';
+import { UserWishlistService } from 'src/app/services/user-wishlist.service';
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-user-home-contents',
   templateUrl: './user-home-contents.component.html',
@@ -7,9 +11,21 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 })
 export class UserHomeContentsComponent implements OnInit {
 
-  constructor() { }
+  pageNo:number=1;
+  searchName!:string;
+  public getMedicineCategoryDetailsList!:AddMedicine[];
+  public getBestSellerMedicineList!:AddMedicine[];
+  public getAllMedicineList!:AddMedicine[];
+
+  constructor(private customerService:CustomerService,private wishListService:UserWishlistService) { }
 
   ngOnInit(): void {
+    this.customerService.getAllHomeInformation().subscribe((response)=>{
+      this.getMedicineCategoryDetailsList=response.getMedicineCategoryDetailsList;
+      this.getBestSellerMedicineList=response.getBestSellerMedicineList;
+      this.getAllMedicineList=response.getAllMedicineList;
+      console.log(response);
+    });
   }
 
   customOptions:OwlOptions={
@@ -40,6 +56,19 @@ export class UserHomeContentsComponent implements OnInit {
       }
     },
     nav:true,
+  }
+  
+  //add products to WishList
+  addToWishlist(medicineId:any){
+      console.log(medicineId);
+      this.wishListService.addProductToWishList(medicineId).subscribe((response)=>{
+        console.log(response);
+        Swal.fire({
+              text:response,
+              confirmButtonColor: '#0b7fd5',
+              confirmButtonText: 'Ok'
+            });
+      });
   }
 
 }

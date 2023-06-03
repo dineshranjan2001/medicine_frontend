@@ -6,4 +6,5 @@ export class Customer {
     customerPhoto!:string;
     customerAddress!:string;
     customerPassword!:string;
+    fileName!:string;
 }
