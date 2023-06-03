@@ -21,7 +21,6 @@ import { UserUpdateMyprofileContentsComponent } from './components/user-update-m
 import { UserIndivisualProductDetailsContentsComponent } from './components/user-indivisual-product-details-contents/user-indivisual-product-details-contents.component';
 import { UserCategorywiseproductContentsComponent } from './components/user-categorywiseproduct-contents/user-categorywiseproduct-contents.component';
 import { UserMycartContentsComponent } from './components/user-mycart-contents/user-mycart-contents.component';
-import { HomeComponent } from './pages/home/home.component';
 import { HomeContentsComponent } from './components/home-contents/home-contents.component';
 import { CustomerGuard } from './guard/customer.guard';
 import { ErrorContentsComponent } from './components/error-contents/error-contents.component';
@@ -29,7 +28,6 @@ import { ErrorContentsComponent } from './components/error-contents/error-conten
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
     children: [
       {
         path: 'mediorder/home',
