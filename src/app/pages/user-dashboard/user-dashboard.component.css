@@ -68,10 +68,9 @@
     margin-left: 0;
   }
 
-main{
+/* main{
     min-height:calc(100vh- 70px- 70px) ;
-}
-
+} */
 .user-dashboard-footer{
     background-color: white;
     box-shadow: -1px -3px 7px rgb(204, 201, 201);

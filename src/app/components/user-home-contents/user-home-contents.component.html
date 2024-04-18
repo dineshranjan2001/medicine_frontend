@@ -35,7 +35,7 @@
                             Currently <br> unavailable</div>
                     </div>
                     <div class="card-body">
-                        <a href="">
+                        <a href="" [routerLink]="['../product-details',getBestSellerMedicine.medicineId]">
                             <h6 class="medicine-name">{{getBestSellerMedicine.medicineName}}</h6>
                             <strong class="manufacture-name">{{getBestSellerMedicine.manufactureName}}</strong>
                             <p class="pt-2" style="color: #064d83;">{{getBestSellerMedicine.categoryName}} <span
@@ -82,7 +82,7 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <a href="">
+                        <a href="" [routerLink]="['../product-details',getAllMedicine.medicineId]">
                             <h6 class="medicine-name">{{getAllMedicine.medicineName}}</h6>
                             <strong class="manufacture-name">{{getAllMedicine.manufactureName}}</strong>
                             <p class="pt-2" style="color: #064d83;">{{getAllMedicine.categoryName}} <span
@@ -98,7 +98,7 @@
                 </div>
             </div>
             <div class="col-md-12">
-                <pagination-controls (pageChange)="pageNo=$event"></pagination-controls>
+                <pagination-controls (pageChange)="pageNo=$event" class="float-end"></pagination-controls>
             </div>
         </div>
     </section>

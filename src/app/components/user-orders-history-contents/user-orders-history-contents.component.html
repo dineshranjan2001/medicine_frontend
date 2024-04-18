@@ -1,6 +1,6 @@
 <div class="container px-5 pt-4">
-    <section class="my-orders-section">
-        <div class="row" *ngIf="orderDetailsList?.length===0">
+    <section class="my-orders-section" style="margin-bottom: 6%;">
+        <div class="row my-4" *ngIf="orderDetailsList?.length===0">
             <div class="col-md-12">
                 <div class="card no-order-card-section">
                     <div class="card-body text-center">
@@ -13,7 +13,7 @@
                 </div>
             </div>
         </div>
-        <div class="row" *ngIf="orderDetailsList?.length!==0">
+        <div class="row" *ngIf="orderDetailsList?.length!==0" style="margin-bottom: 10%;">
             <div class="col-md-12">
                 <div class="card order-header">
                     <div class="card-body">

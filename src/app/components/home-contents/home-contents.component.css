@@ -1,3 +1,7 @@
+a{
+    text-decoration: none;
+}
+
 .home-slider-section{
     background-color: white;
     padding-top: 5rem !important;
@@ -14,6 +18,14 @@
     color: white;
     transition: 0.3s;
     cursor: pointer;
+}
+
+.about-heading{
+    color: #4bafcd !important;
+}
+.about-contents{
+    text-align: justify;
+    color: #075445;
 }
 
 .home-slider-section .get-started-btn:hover {
@@ -75,6 +87,7 @@
     width: 90%;
     padding: 16px 0px 0px 3rem;
     text-align: center;
+    height: 27rem;
 }
 .about-us-section .card{
     border: 2px solid #5dd0d2;

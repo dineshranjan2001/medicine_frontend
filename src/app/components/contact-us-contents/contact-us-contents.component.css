@@ -1,0 +1,25 @@
+body{
+	background-image: url("../../../assets/images/background-pic.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	/* height: 100vh; */
+}
+  .page-footer a {
+    display: flex;
+    margin-left: 4px;
+}
+.contact-us{
+    background-color: #fbfbfd;
+    margin-top: 2.5rem;
+    margin-bottom: 5rem;
+    border-radius: 6px;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.contact-us label{
+    color: #f05498;
+}
+.contact-us h1{
+    color: #35a5a7;
+}

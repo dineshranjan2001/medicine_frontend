@@ -10,7 +10,7 @@
                         <strong class="text-danger">Empty Cart</strong>
                         <div style="color: #0b7fd5;">You have no items in your cart. Start shopping!</div>
                         <div class="pt-2">
-                            <a href="" class="btn btn-sky">Shop now</a>
+                            <a href="#" [routerLink]="['../home']" class="btn btn-sky">Shop now</a>
                         </div>
                     </div>
                 </div>
@@ -29,7 +29,7 @@
                     <div class="card-body">
                         <div class="col-md-3 float-end pb-3">
                             <button class="btn btn-danger ms-4" (click)="deleteItems('0')">Clear Carts</button>
-                            <button class="btn btn-sky float-end">Shop more</button>
+                            <a href="#" [routerLink]="['../home']" class="btn btn-sky float-end">Shop more</a>
                         </div>
                         <table class="table table-responsive">
                             <thead>

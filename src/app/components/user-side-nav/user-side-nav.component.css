@@ -61,6 +61,9 @@ hr{
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
 }
+.user-menu-section .logout-btn:hover{
+    color: red !important;
+}
 .active{
     background-color: white;
     border-top-left-radius: 50px;

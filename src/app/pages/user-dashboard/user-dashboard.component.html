@@ -17,8 +17,10 @@
               <span class="nos-carts" *ngIf="totalOrderProductNos!==0">{{totalOrderProductNos}}</span>
               <!-- <img *ngIf="fileName!=null" src={{fileName}} alt="" class="img-fluid profile-short-name">
                 <img *ngIf="fileName==null" src="../../../assets/images/no-photos.png" alt="" class="img-fluid profile-short-name" style="padding: 4px;"> -->
-                <img *ngIf="profilePic!==null" src={{profilePic}} alt="" class="img-fluid profile-short-name" style="padding: 4px;">
-                <img *ngIf="profilePic===null" src="../../../assets/images/user.png" alt="" class="img-fluid profile-short-name" style="padding: 4px;">
+              <img *ngIf="profilePic!==null" src={{profilePic}} alt="" class="img-fluid profile-short-name"
+                style="padding: 4px;">
+              <img *ngIf="profilePic===null" src="../../../assets/images/user.png" alt=""
+                class="img-fluid profile-short-name" style="padding: 4px;">
             </div>
           </div>
         </nav>
@@ -28,11 +30,9 @@
           <router-outlet></router-outlet>
         </section>
         <section class="user-dashboard-footer mt-4">
-          <div class="row">
+          <div class="row text-center">
             <div class="col-md-12 p-4 copyright-section">
-              <span>Copyright &#xa9; 2023 All rights reversed | </span><span>Design By <a href="#"
-                  target="_blank">Dinesh
-                  Ranjan Biswal</a></span>
+              <span>&#xa9; Copyright 2023 Mediorder. All rights reversed.</span>
             </div>
           </div>
         </section>

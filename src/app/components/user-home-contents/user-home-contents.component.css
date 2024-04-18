@@ -113,12 +113,13 @@ a{
   height: 200px;
   border-radius: 3px;
 }
-.ngx-pagination {
-  background-color: #0b7fd5 !important;
+
+/* .ngx-pagination {
+  background:#03a8ab !important;
   text-justify: inter-word;
   border-radius: 3px;
   text-decoration: none;
 }
 .ngx-pagination .current{
   background-color: #055051 !important;
-}
+} */

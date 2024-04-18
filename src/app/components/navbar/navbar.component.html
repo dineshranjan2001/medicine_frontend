@@ -12,16 +12,13 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-top: -4px;">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Terms And Conditions</a>
+            <a class="nav-link" [routerLinkActive]="'active'" aria-current="page" href="#" [routerLink]="['/mediorder/home']">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">About Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact Us</a>
+            <a class="nav-link" href="#" [routerLinkActive]="'active'" [routerLink]="['/mediorder/contact-us']">Contact Us</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -31,16 +28,16 @@
               <li><a class="dropdown-item" [routerLink]="['/mediorder/sign-in']" [routerLinkActive]="['active']" #signIn="routerLinkActive">Sign In</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" [routerLink]="['/mediorder/sign-up']" [routerLinkActive]="['active']" #signUp="routerLinkActive">Sign Up</a></li>
+              <!-- <li><hr class="dropdown-divider"></li> -->
+              <!-- <li><a class="dropdown-item" [routerLink]="['/mediorder/shop-sign-in']" [routerLinkActive]="['active']" #shopSignIn="routerLinkActive">Shop Sign In</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" [routerLink]="['/mediorder/shop-sign-in']" [routerLinkActive]="['active']" #shopSignIn="routerLinkActive">Shop Sign In</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" [routerLink]="['/mediorder/shop-sign-up']" [routerLinkActive]="['active']" #shopSignUp="routerLinkActive">Shop Sign Up</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/mediorder/shop-sign-up']" [routerLinkActive]="['active']" #shopSignUp="routerLinkActive">Shop Sign Up</a></li> -->
             </ul>
           </li>
         </ul> 
-        <div class="nav-start-btn">
+        <button href="#" class="nav-start-btn">
           Start Here
-        </div>
+        </button>
       </div>
     </div>
   </nav>

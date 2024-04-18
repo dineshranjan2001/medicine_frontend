@@ -24,8 +24,8 @@ export class UserCategorywiseproductContentsComponent implements OnInit {
   ngOnInit(): void {
     this.categoryId=this.activatedRoute.snapshot.paramMap.get('categoryId');
     this.customerService.getMedicineDetailsByCategoryId(this.categoryId).subscribe((response)=>{
-      this.categoryWiseProductList=response;
-      this.categoryName=this.categoryWiseProductList[0].categoryName;
+      this.categoryName=response.medicineCategoryName;
+      this.categoryWiseProductList=response.medicineDetailsByCategoryId;
       this.comService.sendProductDetails(this.categoryWiseProductList);
       console.log(response);
     });

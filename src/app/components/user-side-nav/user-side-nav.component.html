@@ -11,11 +11,11 @@
     </div>
     <hr>
     <div class="user-menu-section">
-        <a class="menu-items" [routerLinkActive]="''" [routerLink]="['']"><i class="fa fa-home"></i> Home</a>
-        <a class="menu-items" [routerLinkActive]="''" [routerLink]="['']"><i class="fa fa-heart-o"></i> My Wishlist</a>
-        <a class="menu-items" [routerLinkActive]="''" [routerLink]="['']"><i class="fa fa-shopping-cart"></i> My Carts</a>
-        <a class="menu-items" [routerLinkActive]="''" [routerLink]="['']"><i class='fa fa-truck'></i> My Orders</a>
-        <a class="menu-items" [routerLinkActive]="''" [routerLink]="['']"><i class="fa fa-address-card"></i> My Profile</a>
-        <a class="menu-items" [routerLinkActive]="''" (click)="customerLogout()"><i class="fa fa-power-off"></i> Logout</a>
+        <a class="menu-items" [routerLinkActive]="'active'" [routerLink]="['user-dashboard/home']"><i class="fa fa-home"></i> Home</a>
+        <a class="menu-items" [routerLinkActive]="'active'" [routerLink]="['user-dashboard/my-wishlist']"><i class="fa fa-heart-o"></i> My Wishlist</a>
+        <a class="menu-items" [routerLinkActive]="'active'" [routerLink]="['user-dashboard/my-carts']"><i class="fa fa-shopping-cart"></i> My Carts</a>
+        <a class="menu-items" [routerLinkActive]="'active'" [routerLink]="['user-dashboard/my-orders']"><i class='fa fa-truck'></i> My Orders</a>
+        <a class="menu-items" [routerLinkActive]="'active'" [routerLink]="['user-dashboard/my-profile']"><i class="fa fa-address-card"></i> My Profile</a>
+        <a class="menu-items logout-btn" [routerLinkActive]="'active'" (click)="customerLogout()"><i class="fa fa-power-off"></i> Logout</a>
     </div>
 </div>

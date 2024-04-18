@@ -24,15 +24,17 @@ import { UserMycartContentsComponent } from './components/user-mycart-contents/u
 import { HomeContentsComponent } from './components/home-contents/home-contents.component';
 import { CustomerGuard } from './guard/customer.guard';
 import { ErrorContentsComponent } from './components/error-contents/error-contents.component';
+import { ContactUsContentsComponent } from './components/contact-us-contents/contact-us-contents.component';
 
 const routes: Routes = [
   {
-    path: '',
-    children: [
+    path:'',
+    children:[
       {
-        path: 'mediorder/home',
-        component: HomeContentsComponent,
-        pathMatch: 'full'
+        path:'mediorder/home',
+        component:HomeContentsComponent,
+        pathMatch:'full',
+        title:'Welcome To Mediorder'
       },
       {
         path: 'mediorder/sign-in',
@@ -60,11 +62,11 @@ const routes: Routes = [
         pathMatch: 'full'
       },
       {
-        path: 'mediorder/shop/forgot-email',
-        component: ForgotPasswordComponent,
-        pathMatch: 'full'
+        path: 'mediorder/contact-us',
+        component: ContactUsContentsComponent,
+        pathMatch: 'full',
+        title:'Contact-Us'
       },
-
     ]
   },
 
@@ -108,47 +110,55 @@ const routes: Routes = [
   {
     path: '',
     component: UserDashboardComponent,
-    canActivate: [CustomerGuard],
+    canActivateChild:[CustomerGuard],
     children: [
       {
         path: 'user-dashboard/home',
         component: UserHomeContentsComponent,
-         pathMatch: 'full'
+         pathMatch: 'full',
+         title:'Welcome to home dashboard...'
       },
       {
         path: 'user-dashboard/my-wishlist',
         component: UserWishlistContentsComponent,
-         pathMatch: 'full'
+         pathMatch: 'full',
+         title:'My Wishlists'
       },
       {
         path: 'user-dashboard/my-carts',
         component: UserMycartContentsComponent,
-         pathMatch: 'full'
+         pathMatch: 'full',
+         title:'My Carts'
       },
       {
         path: 'user-dashboard/my-orders',
         component: UserOrdersHistoryContentsComponent,
-         pathMatch: 'full'
+         pathMatch: 'full',
+         title:'My Orders'
       },
       {
         path: 'user-dashboard/my-profile',
         component: UserProfileContentsComponent,
-         pathMatch: 'full'
+         pathMatch: 'full',
+         title:'My Profile'
       },
       {
         path: 'user-dashboard/update-my-profile',
         component: UserUpdateMyprofileContentsComponent,
-         pathMatch: 'full'
+         pathMatch: 'full',
+         title:'Update Profile Details'
       },
       {
         path: 'user-dashboard/product-details/:medicineId',
         component: UserIndivisualProductDetailsContentsComponent,
-         pathMatch: 'full'
+         pathMatch: 'full',
+         title:'Details of this Medicine'
       },
       {
         path: 'user-dashboard/product-category/:categoryId',
         component: UserCategorywiseproductContentsComponent,
-         pathMatch: 'full'
+         pathMatch: 'full',
+         title:'Medicine Details'
       }
     ]
   },

@@ -37,7 +37,6 @@ import { UserOrdersHistoryContentsComponent } from './components/user-orders-his
 import { UserUpdateMyprofileContentsComponent } from './components/user-update-myprofile-contents/user-update-myprofile-contents.component';
 import { UserIndivisualProductDetailsContentsComponent } from './components/user-indivisual-product-details-contents/user-indivisual-product-details-contents.component';
 import { HomeContentsComponent } from './components/home-contents/home-contents.component';
-import { TermsAndConditionsContentsComponent } from './components/terms-and-conditions-contents/terms-and-conditions-contents.component';
 import { ContactUsContentsComponent } from './components/contact-us-contents/contact-us-contents.component';
 import { authInterceptorProviders } from './interceptors/auth.interceptor';
 import { ErrorContentsComponent } from './components/error-contents/error-contents.component';
@@ -71,7 +70,6 @@ import { ErrorContentsComponent } from './components/error-contents/error-conten
     UserUpdateMyprofileContentsComponent,
     UserIndivisualProductDetailsContentsComponent,
     HomeContentsComponent,
-    TermsAndConditionsContentsComponent,
     ContactUsContentsComponent,
     ErrorContentsComponent,
   ],

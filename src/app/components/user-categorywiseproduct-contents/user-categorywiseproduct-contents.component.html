@@ -1,50 +1,75 @@
 <div class="container px-5 pt-4">
-    <h5><i class="fa fa-hand-o-right"></i> {{categoryName}} Medicine</h5>
+    <h5><i class="fa fa-hand-o-right"></i> {{categoryName}} Medicines</h5>
     <section class="product-category-section mt-3">
-        <div class="row">
-            <div class="col-md-8"></div>
-            <div class="col-md-4">
-                <input type="text" class="form-control mb-2" placeholder="Search Here..." name="searchName"
-                    [(ngModel)]="searchName">
+        <div class="row mb-5" *ngIf="categoryWiseProductList?.length==0">
+            <div class="col-md-12">
+                <div class="card no-medicine-card-section">
+                    <div class="card-body text-center">
+                        <div class="no-carts-image-section mb-4">
+                            <img src="../../../assets/images/no-drugs.png" alt="" class="img-fluid">
+                        </div>
+                        <strong class="text-danger">No {{categoryName}} medicines are not available for now. </strong>
+                        <div style="color: #0b7fd5;">Available soon.</div>
+                        <div class="pt-2">
+                            <a href="#" [routerLink]="['../../home']" class="btn btn-sky">Go to home</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-12"
-                *ngFor="let categoryWiseProduct of categoryWiseProductList | filter:searchName | paginate:{itemsPerPage:4,currentPage:pageNo}">
-                <div class="card product-category-card-section">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-2">
-                                <span id="heart" class="heart"><i class="fa fa-heart"></i></span>
-                                <img src={{categoryWiseProduct.fileName}} alt=""
-                                    class="img-fluid medicine-photo-section">
-                                <div *ngIf="categoryWiseProduct.inStock==false"
-                                    class="text-danger not-available-section">Currently <br> unavailable</div>
-                            </div>
-                            <div class="col-md-10">
-                                <a [routerLink]="['../../product-details/',categoryWiseProduct.medicineId]">
-                                    <div class="medicine-name">{{categoryWiseProduct.medicineName}}</div>
-                                    <strong class="manufacture-name">{{categoryWiseProduct.manufactureName}}</strong>
-                                    <div class="my-2" style="color: #0b7fd5 !important;">{{categoryWiseProduct.categoryName}}</div>
-                                </a>
-                                <div class="mt-3 fw-bold fs-5"><span>&#8377;</span>{{categoryWiseProduct.medicinePrice}}
+
+        <div *ngIf="categoryWiseProductList?.length!=0">
+            <div class="row">
+                <div class="col-md-8"></div>
+                <div class="col-md-4">
+                    <input type="text" class="form-control mb-2" placeholder="Search Here..." name="searchName"
+                        [(ngModel)]="searchName">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12"
+                    *ngFor="let categoryWiseProduct of categoryWiseProductList | filter:searchName | paginate:{itemsPerPage:4,currentPage:pageNo}">
+                    <div class="card product-category-card-section">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <span id="heart" class="heart"><i class="fa fa-heart"></i></span>
+                                    <img src={{categoryWiseProduct.fileName}} alt=""
+                                        class="img-fluid medicine-photo-section">
+                                    <div *ngIf="categoryWiseProduct.inStock==false"
+                                        class="text-danger not-available-section">Currently <br> unavailable</div>
                                 </div>
-                                <div>
-                                    <button class="btn btn-sky float-end mt-2"><i class="fa fa-shopping-cart"></i> Add
-                                        To
-                                        Cart</button>
-                                    <button *ngIf="categoryWiseProduct.inStock==false" disabled class="btn btn-sky float-end mt-2"><i class="fa fa-shopping-cart"></i> Add
-                                        To
-                                        Cart</button>
+                                <div class="col-md-10">
+                                    <a [routerLink]="['../../product-details/',categoryWiseProduct.medicineId]">
+                                        <div class="medicine-name">{{categoryWiseProduct.medicineName}}</div>
+                                        <strong
+                                            class="manufacture-name">{{categoryWiseProduct.manufactureName}}</strong>
+                                        <div class="my-2" style="color: #0b7fd5 !important;">
+                                            {{categoryWiseProduct.categoryName}}</div>
+                                    </a>
+                                    <div class="mt-3 fw-bold fs-5">
+                                        <span>&#8377;</span>{{categoryWiseProduct.medicinePrice}}
+                                    </div>
+                                    <div>
+                                        <button class="btn btn-sky float-end mt-2"><i class="fa fa-shopping-cart"></i>
+                                            Add
+                                            To
+                                            Cart</button>
+                                        <button *ngIf="categoryWiseProduct.inStock==false" disabled
+                                            class="btn btn-sky float-end mt-2"><i class="fa fa-shopping-cart"></i> Add
+                                            To
+                                            Cart</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-12 my-2">
-            <pagination-controls class="float-end" (pageChange)="pageNo=$event"></pagination-controls>
+
+            <div class="col-md-12 my-2">
+                <pagination-controls class="float-end" (pageChange)="pageNo=$event"></pagination-controls>
+            </div>
         </div>
     </section>
 </div>

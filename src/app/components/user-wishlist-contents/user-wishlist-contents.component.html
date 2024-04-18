@@ -31,7 +31,7 @@
                                 <div class="text-danger not-available-section" *ngIf="wishlistProductDetails.inStock==false">Currently <br> unavailable</div>
                             </div>
                             <div class="col-md-9">
-                                <a href="">
+                                <a href="" [routerLink]="['../product-details',wishlistProductDetails.medicineId]">
                                     <div class="medicine-name">{{wishlistProductDetails.medicineName}}</div>
                                     <strong class="manufacture-name">{{wishlistProductDetails.manufactureName}}</strong>
                                     <div class="category-name my-2">{{wishlistProductDetails.categoryName}}</div>

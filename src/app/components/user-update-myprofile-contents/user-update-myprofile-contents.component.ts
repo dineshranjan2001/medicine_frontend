@@ -30,7 +30,7 @@ export class UserUpdateMyprofileContentsComponent implements OnInit {
 
   ngOnInit(): void {
     this.customerProfileService.getUserProfileDetails().subscribe((response) => {
-      this.customerDetails = response;
+      this.customerDetails = response.customerDetails;
     });
   }
 
